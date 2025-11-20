@@ -10,6 +10,7 @@ import tqmImg from "@/assets/certificates/tqm.jpg";
 import iso9001Img from "@/assets/certificates/iso-9001.png";
 import haccpImg from "@/assets/certificates/haccp.png";
 import nagrada2024Img from "@/assets/certificates/nagrada-2024.png";
+import heroImg from "@/assets/hero/standardi-hero.jpg";
 
 const Standardi = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -59,13 +60,19 @@ const Standardi = () => {
       <Header />
       
       <main className="flex-1">
-        <section className="py-16 md:py-24 gradient-hero">
-          <div className="container mx-auto px-4">
+        <section className="relative py-32 md:py-40 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImg})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
                 Standardi i nagrade
               </h1>
-              <p className="text-xl text-white/90">
+              <p className="text-xl md:text-2xl text-white/95 animate-fade-in">
                 Sertifikati kvaliteta i priznanja za izuzetan poslovni uspeh
               </p>
             </div>
@@ -85,16 +92,7 @@ const Standardi = () => {
                       <Shield className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">IFS HPC Standard</h3>
-                    <p className="text-muted-foreground mb-4">Međunarodni standard za proizvode za ličnu higijenu i kozmetiku</p>
-                    <Button 
-                      onClick={() => setSelectedImage(ifsHpcImg)}
-                      variant="outline"
-                      size="sm"
-                      className="w-full"
-                    >
-                      <Eye className="h-4 w-4 mr-2" />
-                      Pogledaj sertifikat
-                    </Button>
+                    <p className="text-muted-foreground">Međunarodni standard za proizvode za ličnu higijenu i kozmetiku</p>
                   </CardContent>
                 </Card>
 
@@ -104,16 +102,7 @@ const Standardi = () => {
                       <Award className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">HACCP Standard</h3>
-                    <p className="text-muted-foreground mb-4">Sistem bezbednosti hrane baziran na analizi i kontroli potencijalnih opasnosti</p>
-                    <Button 
-                      onClick={() => setSelectedImage(haccpImg)}
-                      variant="outline"
-                      size="sm"
-                      className="w-full"
-                    >
-                      <Eye className="h-4 w-4 mr-2" />
-                      Pogledaj sertifikat
-                    </Button>
+                    <p className="text-muted-foreground">Sistem bezbednosti hrane baziran na analizi i kontroli potencijalnih opasnosti</p>
                   </CardContent>
                 </Card>
 
@@ -123,16 +112,7 @@ const Standardi = () => {
                       <CheckCircle2 className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">ISO Sertifikati</h3>
-                    <p className="text-muted-foreground mb-4">ISO 9001:2015 i TQM standardi kvaliteta</p>
-                    <Button 
-                      onClick={() => setSelectedImage(iso9001Img)}
-                      variant="outline"
-                      size="sm"
-                      className="w-full"
-                    >
-                      <Eye className="h-4 w-4 mr-2" />
-                      Pogledaj sertifikat
-                    </Button>
+                    <p className="text-muted-foreground">ISO 9001:2015 i TQM standardi kvaliteta</p>
                   </CardContent>
                 </Card>
               </div>
