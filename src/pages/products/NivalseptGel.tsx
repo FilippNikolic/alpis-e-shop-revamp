@@ -4,7 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Droplets, AlertCircle } from "lucide-react";
+import { RelatedProducts } from "@/components/RelatedProducts";
 import nivalseptGelImg from "@/assets/products/nivalsept-gel.png";
+import nivalseptPumpImg from "@/assets/products/nivalsept-pump.png";
+import nivalseptRefillImg from "@/assets/products/nivalsept-refill.png";
 
 const NivalseptGel = () => {
   const features = [
@@ -137,6 +140,21 @@ const NivalseptGel = () => {
             </div>
           </div>
         </section>
+
+        <RelatedProducts products={[
+          {
+            name: "NIVALSEPT Pumpica",
+            image: nivalseptPumpImg,
+            link: "/proizvodi/nivalsept-pumpica",
+            description: "Sa praktičnom pumpicom"
+          },
+          {
+            name: "NIVALSEPT Refil",
+            image: nivalseptRefillImg,
+            link: "/proizvodi/nivalsept-dopuna",
+            description: "Dopuna za pumpice"
+          }
+        ]} />
       </main>
 
       <Footer />

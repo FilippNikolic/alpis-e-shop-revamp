@@ -4,7 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
+import { RelatedProducts } from "@/components/RelatedProducts";
 import demivodaImg from "@/assets/products/demivoda.png";
+import alkohol70Img from "@/assets/products/alkohol70.png";
+import etanol96Img from "@/assets/products/etanol96.png";
+import nivalImg from "@/assets/products/nival.png";
 
 const Demivoda = () => {
   const specifications = [
@@ -120,6 +124,27 @@ const Demivoda = () => {
             </div>
           </div>
         </section>
+
+        <RelatedProducts products={[
+          {
+            name: "Alkohol 70%",
+            image: alkohol70Img,
+            link: "/proizvodi/alkohol70",
+            description: "Razblaženi alkohol za industrijsku upotrebu"
+          },
+          {
+            name: "Etanol 96%",
+            image: etanol96Img,
+            link: "/proizvodi/etanol96",
+            description: "Visokokvalitetni etanol"
+          },
+          {
+            name: "NIVAL",
+            image: nivalImg,
+            link: "/proizvodi/nival",
+            description: "Tečnost za pranje stakala"
+          }
+        ]} />
       </main>
 
       <Footer />

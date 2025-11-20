@@ -3,8 +3,14 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Eye } from "lucide-react";
+import { RelatedProducts } from "@/components/RelatedProducts";
 import alkohol70Img from "@/assets/products/alkohol70.png";
+import etanol96Img from "@/assets/products/etanol96.png";
+import alksirceImg from "@/assets/products/sirce.png";
+import demivodaImg from "@/assets/products/demivoda.png";
+import { useState } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const Alkohol70 = () => {
   const specifications = [
@@ -122,48 +128,32 @@ const Alkohol70 = () => {
         </section>
 
         {/* Related Products */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">Slični proizvodi</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="shadow-card hover:shadow-hover transition-all">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-2">Etanol 96%</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Visokokvalitetni etanol za industrijsku upotrebu
-                  </p>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link to="/proizvodi/etanol96">Saznajte više</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-card hover:shadow-hover transition-all">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-2">Demineralizovana voda</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Čista voda bez mineralnih primesa
-                  </p>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link to="/proizvodi/demivoda">Saznajte više</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-card hover:shadow-hover transition-all">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-2">Alkoholno sirće</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Alkoholno sirće 9% za kućnu upotrebu
-                  </p>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link to="/proizvodi/alksirce">Saznajte više</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        <RelatedProducts products={[
+          {
+            name: "Etanol 96%",
+            image: etanol96Img,
+            link: "/proizvodi/etanol96",
+            description: "Visokokvalitetni etanol za industrijsku upotrebu"
+          },
+          {
+            name: "Demivoda",
+            image: demivodaImg,
+            link: "/proizvodi/demivoda",
+            description: "Čista voda bez mineralnih primesa"
+          },
+          {
+            name: "Alkoholno sirće",
+            image: alksirceImg,
+            link: "/proizvodi/alksirce",
+            description: "Alkoholno sirće 9%"
+          },
+          {
+            name: "NIVAL",
+            image: alkohol70Img,
+            link: "/proizvodi/nival",
+            description: "Tečnost za pranje stakala"
+          }
+        ]} />
       </main>
 
       <Footer />
