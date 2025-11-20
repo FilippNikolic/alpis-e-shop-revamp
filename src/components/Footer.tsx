@@ -1,0 +1,90 @@
+import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin } from "lucide-react";
+
+export const Footer = () => {
+  return (
+    <footer className="border-t border-border bg-muted/30">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-lg font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              ALPIS
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              Proizvodnja etanola i povezanih proizvoda najvišeg kvaliteta.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4">Proizvodi</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/proizvodi/alkohol70" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Alkohol 70%
+                </Link>
+              </li>
+              <li>
+                <Link to="/proizvodi/etanol96" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Etanol 96%
+                </Link>
+              </li>
+              <li>
+                <Link to="/proizvodi/demivoda" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Demineralizovana voda
+                </Link>
+              </li>
+              <li>
+                <Link to="/proizvodi/alksirce" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Alkoholno sirće
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4">Kompanija</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/kompanija" className="text-muted-foreground hover:text-foreground transition-colors">
+                  O nama
+                </Link>
+              </li>
+              <li>
+                <Link to="/karijera" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Karijera
+                </Link>
+              </li>
+              <li>
+                <Link to="/kontakt" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Kontakt
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4">Kontakt</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
+                <span>Dunavska 77, Kovin, Srbija</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 flex-shrink-0" />
+                <span>+381 13 745 600</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 flex-shrink-0" />
+                <span>office@alpis.rs</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
+          <p>© {new Date().getFullYear()} Alpis doo. Sva prava zadržana.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
