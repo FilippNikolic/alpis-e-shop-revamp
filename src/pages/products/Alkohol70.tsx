@@ -5,12 +5,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Eye } from "lucide-react";
 import { RelatedProducts } from "@/components/RelatedProducts";
+import { useState } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import alkohol70Img from "@/assets/products/alkohol70.png";
 import etanol96Img from "@/assets/products/etanol96.png";
 import alksirceImg from "@/assets/products/sirce.png";
 import demivodaImg from "@/assets/products/demivoda.png";
-import { useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import heroImg from "@/assets/hero/products-hero.jpg";
 
 const Alkohol70 = () => {
   const specifications = [
@@ -34,13 +35,19 @@ const Alkohol70 = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 md:py-24 gradient-hero">
-          <div className="container mx-auto px-4">
+        <section className="relative py-32 md:py-40 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImg})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
                 Alkohol 70%
               </h1>
-              <p className="text-xl text-white/90">
+              <p className="text-xl md:text-2xl text-white/95 animate-fade-in">
                 Razblaženi alkohol za industrijsku i medicinsku upotrebu
               </p>
             </div>
