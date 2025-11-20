@@ -148,6 +148,34 @@ const Standardi = () => {
                     usklađenost sa regulatornim zahtevima i garantuje bezbednost i kvalitet proizvoda.
                   </p>
                   
+                  <h4 className="font-semibold mb-3">IFS HPC standard obuhvata:</h4>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">1. Upravljanje kvalitetom i bezbednosti proizvoda</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">2. Kontrola sirovina i ambalaže</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">3. Proizvodnja i pakovanje proizvoda</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">4. Usklađenost sa regulativom i zakonodavstvom</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">5. Higijena i mikrobiološka kontrola</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">6. Upravljanje reklamacijama i povlačenjem proizvoda</span>
+                    </li>
+                  </ul>
+
                   <Button 
                     onClick={() => setSelectedImage(ifsHpcImg)}
                     size="lg"
@@ -169,6 +197,38 @@ const Standardi = () => {
                     kvalitet poslovanja.
                   </p>
                   
+                  <h4 className="font-semibold mb-3">ISO 9001:2015 se zasniva na sledećim principima:</h4>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">1. Fokus na kupca i zadovoljenje njegovih potreba</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">2. Rukovođenje i strateško usmeravanje</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">3. Angažovanje zaposlenih na svim nivoima</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">4. Procesni pristup upravljanju</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">5. Kontinuirano poboljšanje</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">6. Donošenje odluka na osnovu podataka</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">7. Upravljanje odnosima sa dobavljačima</span>
+                    </li>
+                  </ul>
+
                   <Button 
                     onClick={() => setSelectedImage(iso9001Img)}
                     size="lg"
@@ -221,6 +281,34 @@ const Standardi = () => {
                     planiranje, kontrolu i unapređenje kvaliteta na svim nivoima organizacije.
                   </p>
                   
+                  <h4 className="font-semibold mb-3">TQM pristup obuhvata:</h4>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">1. Fokus na kvalitet u svim poslovnim procesima</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">2. Uključenost svih zaposlenih u poboljšanje kvaliteta</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">3. Kontinuirano merenje i analiza performansi</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">4. Sistematski pristup rešavanju problema</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">5. Izgradnja kulture kvaliteta u organizaciji</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">6. Dugoročna posvećenost upravljanju kvalitetom</span>
+                    </li>
+                  </ul>
+
                   <Button 
                     onClick={() => setSelectedImage(tqmImg)}
                     size="lg"
