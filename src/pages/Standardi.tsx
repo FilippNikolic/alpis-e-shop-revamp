@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Shield, CheckCircle2, ExternalLink } from "lucide-react";
+import ifsHpcImg from "@/assets/certificates/ifs-hpc.png";
 
 const Standardi = () => {
   const standards = [
@@ -81,6 +82,23 @@ const Standardi = () => {
                   </Card>
                 ))}
               </div>
+
+              {/* IFS HPC Certificate */}
+              <Card className="shadow-card mb-12">
+                <CardContent className="pt-6">
+                  <h3 className="text-2xl font-bold mb-4">IFS HPC Sertifikat</h3>
+                  <p className="text-muted-foreground mb-6">
+                    Međunarodni standard za proizvode za ličnu higijenu i kozmetiku
+                  </p>
+                  <div className="bg-muted/30 rounded-lg overflow-hidden">
+                    <img 
+                      src={ifsHpcImg}
+                      alt="IFS HPC Certificate" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
 
               {/* HACCP Details */}
               <Card className="shadow-card mb-12">

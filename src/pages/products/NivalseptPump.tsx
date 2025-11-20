@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Droplets, AlertCircle } from "lucide-react";
+import nivalseptPumpImg from "@/assets/products/nivalsept-pump.png";
 
 const NivalseptPump = () => {
   const uses = [
@@ -82,6 +83,13 @@ const NivalseptPump = () => {
               <div className="space-y-6">
                 <Card className="shadow-card">
                   <CardContent className="pt-6">
+                    <div className="aspect-square w-full mb-4 bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg overflow-hidden flex items-center justify-center p-6">
+                      <img 
+                        src={nivalseptPumpImg}
+                        alt="Nivalsept sa pumpicom 1L" 
+                        className="w-full h-full object-contain drop-shadow-lg"
+                      />
+                    </div>
                     <h3 className="text-xl font-semibold mb-4">Područja primene</h3>
                     <ul className="space-y-3">
                       {uses.map((use, index) => (

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Droplet, Shield } from "lucide-react";
+import nivalImg from "@/assets/products/nival.png";
 
 const Nival = () => {
   const specifications = [
@@ -72,6 +73,13 @@ const Nival = () => {
               <div className="space-y-6">
                 <Card className="shadow-card">
                   <CardContent className="pt-6">
+                    <div className="aspect-square w-full mb-4 bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg overflow-hidden flex items-center justify-center p-6">
+                      <img 
+                        src={nivalImg}
+                        alt="Nival tečnost za pranje stakala" 
+                        className="w-full h-full object-contain drop-shadow-lg"
+                      />
+                    </div>
                     <div className="flex items-center gap-3 mb-4">
                       <Droplet className="h-6 w-6 text-primary" />
                       <h3 className="text-xl font-semibold">Fizičko-hemijske osobine</h3>
