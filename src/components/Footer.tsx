@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export const Footer = () => {
   return (
@@ -7,11 +8,12 @@ export const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              ALPIS
-            </h3>
-            <p className="text-sm text-muted-foreground">
+            <img src={logo} alt="Alpis doo" className="h-10 w-auto mb-3" />
+            <p className="text-sm text-muted-foreground mb-2">
               Proizvodnja etanola i povezanih proizvoda najvišeg kvaliteta.
+            </p>
+            <p className="text-xs font-semibold text-foreground">
+              ALPIS d.o.o.
             </p>
           </div>
 
