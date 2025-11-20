@@ -79,17 +79,62 @@ const Standardi = () => {
               <h2 className="text-3xl font-bold mb-8 text-center">Naši standardi</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                {standards.map((standard, index) => (
-                  <Card key={index} className="shadow-card hover:shadow-hover transition-all">
-                    <CardContent className="pt-6 text-center">
-                      <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                        <standard.icon className="h-8 w-8 text-primary" />
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">{standard.title}</h3>
-                      <p className="text-muted-foreground">{standard.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
+                <Card className="shadow-card hover:shadow-hover transition-all">
+                  <CardContent className="pt-6 text-center">
+                    <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <Shield className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">IFS HPC Standard</h3>
+                    <p className="text-muted-foreground mb-4">Međunarodni standard za proizvode za ličnu higijenu i kozmetiku</p>
+                    <Button 
+                      onClick={() => setSelectedImage(ifsHpcImg)}
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                    >
+                      <Eye className="h-4 w-4 mr-2" />
+                      Pogledaj sertifikat
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                <Card className="shadow-card hover:shadow-hover transition-all">
+                  <CardContent className="pt-6 text-center">
+                    <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <Award className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">HACCP Standard</h3>
+                    <p className="text-muted-foreground mb-4">Sistem bezbednosti hrane baziran na analizi i kontroli potencijalnih opasnosti</p>
+                    <Button 
+                      onClick={() => setSelectedImage(haccpImg)}
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                    >
+                      <Eye className="h-4 w-4 mr-2" />
+                      Pogledaj sertifikat
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                <Card className="shadow-card hover:shadow-hover transition-all">
+                  <CardContent className="pt-6 text-center">
+                    <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle2 className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">ISO Sertifikati</h3>
+                    <p className="text-muted-foreground mb-4">ISO 9001:2015 i TQM standardi kvaliteta</p>
+                    <Button 
+                      onClick={() => setSelectedImage(iso9001Img)}
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                    >
+                      <Eye className="h-4 w-4 mr-2" />
+                      Pogledaj sertifikat
+                    </Button>
+                  </CardContent>
+                </Card>
               </div>
 
               {/* IFS HPC Certificate */}
@@ -196,27 +241,27 @@ const Standardi = () => {
               {awards.map((award, index) => (
                 <Card key={index} className="shadow-card mb-8">
                   <CardContent className="pt-6">
-                    <div className="grid md:grid-cols-[300px_1fr] gap-6 items-start">
-                      <div className="bg-muted/30 rounded-lg overflow-hidden p-4 flex items-center justify-center">
+                    <div className="flex gap-6 items-center">
+                      <div className="bg-muted/30 rounded-lg overflow-hidden p-3 flex items-center justify-center flex-shrink-0">
                         <img 
                           src={nagrada2024Img}
                           alt="Nagrada Privredne komore Srbije 2024" 
-                          className="w-full h-auto"
-                          style={{ maxWidth: '280px' }}
+                          className="w-auto h-auto"
+                          style={{ maxWidth: '120px', maxHeight: '120px' }}
                         />
                       </div>
                       <div className="flex-1">
-                        <div className="flex items-start gap-4 mb-4">
-                          <div className="h-12 w-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                            <Award className="h-6 w-6 text-accent" />
+                        <div className="flex items-start gap-3 mb-3">
+                          <div className="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                            <Award className="h-5 w-5 text-accent" />
                           </div>
                           <div>
                             <h3 className="text-xl font-semibold mb-2">{award.title}</h3>
-                            <p className="text-muted-foreground">{award.description}</p>
+                            <p className="text-muted-foreground text-sm">{award.description}</p>
                           </div>
                         </div>
                         
-                        <div className="space-y-2">
+                        <div className="space-y-1 ml-13">
                           <p className="text-sm font-semibold">Više informacija:</p>
                           {award.links.map((link, linkIndex) => (
                             <a
@@ -226,7 +271,7 @@ const Standardi = () => {
                               rel="noopener noreferrer"
                               className="flex items-center gap-2 text-sm text-primary hover:underline"
                             >
-                              <ExternalLink className="h-4 w-4" />
+                              <ExternalLink className="h-3 w-3" />
                               {link.text}
                             </a>
                           ))}
