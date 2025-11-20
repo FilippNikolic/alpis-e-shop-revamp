@@ -13,10 +13,12 @@ import Nival from "./pages/products/Nival";
 import NivalseptPump from "./pages/products/NivalseptPump";
 import NivalseptRefill from "./pages/products/NivalseptRefill";
 import NivalseptGel from "./pages/products/NivalseptGel";
+import TehnickiAlkohol from "./pages/products/TehnickiAlkohol";
 import Kompanija from "./pages/Kompanija";
 import Karijera from "./pages/Karijera";
 import Kontakt from "./pages/Kontakt";
 import OAlkoholu from "./pages/OAlkoholu";
+import Standardi from "./pages/Standardi";
 
 const queryClient = new QueryClient();
 
@@ -36,10 +38,12 @@ const App = () => (
           <Route path="/proizvodi/nivalsept-pumpica" element={<NivalseptPump />} />
           <Route path="/proizvodi/nivalsept-dopuna" element={<NivalseptRefill />} />
           <Route path="/proizvodi/nivalsept-gel" element={<NivalseptGel />} />
+          <Route path="/proizvodi/tehnicki-alkohol" element={<TehnickiAlkohol />} />
           <Route path="/kompanija" element={<Kompanija />} />
           <Route path="/karijera" element={<Karijera />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/o-alkoholu" element={<OAlkoholu />} />
+          <Route path="/standardi" element={<Standardi />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

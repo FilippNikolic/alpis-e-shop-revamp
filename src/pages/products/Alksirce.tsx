@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
+import sirceImg from "@/assets/products/sirce.png";
 
 const Alksirce = () => {
   const specifications = [
@@ -72,6 +73,13 @@ const Alksirce = () => {
               <div className="space-y-6">
                 <Card className="shadow-card">
                   <CardContent className="pt-6">
+                    <div className="aspect-square w-full mb-4 bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg overflow-hidden flex items-center justify-center p-6">
+                      <img 
+                        src={sirceImg}
+                        alt="Alkoholno sirće" 
+                        className="w-full h-full object-contain drop-shadow-lg"
+                      />
+                    </div>
                     <h3 className="text-xl font-semibold mb-4">Specifikacije</h3>
                     <ul className="space-y-3">
                       {specifications.map((spec, index) => (
