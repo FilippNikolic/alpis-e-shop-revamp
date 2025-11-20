@@ -3,6 +3,10 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Shield, CheckCircle2, ExternalLink } from "lucide-react";
 import ifsHpcImg from "@/assets/certificates/ifs-hpc.png";
+import tqmImg from "@/assets/certificates/tqm.jpg";
+import iso9001Img from "@/assets/certificates/iso-9001.png";
+import haccpImg from "@/assets/certificates/haccp.png";
+import nagrada2024Img from "@/assets/certificates/nagrada-2024.png";
 
 const Standardi = () => {
   const standards = [
@@ -83,27 +87,74 @@ const Standardi = () => {
                 ))}
               </div>
 
-              {/* IFS HPC Certificate */}
-              <Card className="shadow-card mb-12">
-                <CardContent className="pt-6">
-                  <h3 className="text-2xl font-bold mb-4">IFS HPC Sertifikat</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Međunarodni standard za proizvode za ličnu higijenu i kozmetiku
-                  </p>
-                  <div className="bg-muted/30 rounded-lg overflow-hidden">
-                    <img 
-                      src={ifsHpcImg}
-                      alt="IFS HPC Certificate" 
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </CardContent>
-              </Card>
+              {/* Certificates Grid */}
+              <h3 className="text-2xl font-bold mb-6">Naši sertifikati</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                {/* IFS HPC Certificate */}
+                <Card className="shadow-card">
+                  <CardContent className="pt-6">
+                    <h4 className="text-lg font-semibold mb-4">IFS HPC Sertifikat</h4>
+                    <div className="bg-muted/30 rounded-lg overflow-hidden p-4 flex items-center justify-center">
+                      <img 
+                        src={ifsHpcImg}
+                        alt="IFS HPC Certificate" 
+                        className="w-full h-auto"
+                        style={{ maxWidth: '300px' }}
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* ISO 9001:2015 Certificate */}
+                <Card className="shadow-card">
+                  <CardContent className="pt-6">
+                    <h4 className="text-lg font-semibold mb-4">ISO 9001:2015 Sertifikat</h4>
+                    <div className="bg-muted/30 rounded-lg overflow-hidden p-4 flex items-center justify-center">
+                      <img 
+                        src={iso9001Img}
+                        alt="ISO 9001:2015 Certificate" 
+                        className="w-full h-auto"
+                        style={{ maxWidth: '250px' }}
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* HACCP Certificate */}
+                <Card className="shadow-card">
+                  <CardContent className="pt-6">
+                    <h4 className="text-lg font-semibold mb-4">HACCP Sertifikat</h4>
+                    <div className="bg-muted/30 rounded-lg overflow-hidden p-4 flex items-center justify-center">
+                      <img 
+                        src={haccpImg}
+                        alt="HACCP Certificate" 
+                        className="w-full h-auto"
+                        style={{ maxWidth: '250px' }}
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* TQM Certificate */}
+                <Card className="shadow-card">
+                  <CardContent className="pt-6">
+                    <h4 className="text-lg font-semibold mb-4">TQM Sertifikat</h4>
+                    <div className="bg-muted/30 rounded-lg overflow-hidden p-4 flex items-center justify-center">
+                      <img 
+                        src={tqmImg}
+                        alt="TQM Certificate" 
+                        className="w-full h-auto"
+                        style={{ maxWidth: '350px' }}
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* HACCP Details */}
               <Card className="shadow-card mb-12">
                 <CardContent className="pt-6">
-                  <h3 className="text-2xl font-bold mb-4">HACCP Standard</h3>
+                  <h3 className="text-2xl font-bold mb-4">O HACCP standardu</h3>
                   <p className="text-muted-foreground mb-6">
                     HACCP je sistem bezbednosti hrane baziran na analizi i kontroli potencijalnih 
                     bioloških/mikrobioloških, hemijskih i fizičkih opasnosti kojima su izložene sirovine. 
@@ -129,13 +180,25 @@ const Standardi = () => {
               {awards.map((award, index) => (
                 <Card key={index} className="shadow-card mb-8">
                   <CardContent className="pt-6">
-                    <div className="flex items-start gap-4">
-                      <div className="h-12 w-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                        <Award className="h-6 w-6 text-accent" />
+                    <div className="grid md:grid-cols-[300px_1fr] gap-6 items-start">
+                      <div className="bg-muted/30 rounded-lg overflow-hidden p-4 flex items-center justify-center">
+                        <img 
+                          src={nagrada2024Img}
+                          alt="Nagrada Privredne komore Srbije 2024" 
+                          className="w-full h-auto"
+                          style={{ maxWidth: '280px' }}
+                        />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-semibold mb-2">{award.title}</h3>
-                        <p className="text-muted-foreground mb-4">{award.description}</p>
+                        <div className="flex items-start gap-4 mb-4">
+                          <div className="h-12 w-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                            <Award className="h-6 w-6 text-accent" />
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-semibold mb-2">{award.title}</h3>
+                            <p className="text-muted-foreground">{award.description}</p>
+                          </div>
+                        </div>
                         
                         <div className="space-y-2">
                           <p className="text-sm font-semibold">Više informacija:</p>
