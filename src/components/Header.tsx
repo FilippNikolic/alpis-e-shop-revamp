@@ -58,18 +58,25 @@ export const Header = () => {
               </Link>
             </div>
           </div>
-          <Link to="/o-alkoholu" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-            O alkoholu
-          </Link>
-          <Link to="/standardi" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-            Standardi
-          </Link>
-          <Link to="/kompanija" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-            Kompanija
-          </Link>
-          <Link to="/karijera" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-            Karijera
-          </Link>
+          <div className="group relative">
+            <button className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+              O nama
+            </button>
+            <div className="absolute left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-popover border border-border rounded-lg shadow-lg py-2 z-50">
+              <Link to="/kompanija" className="block px-4 py-2 text-sm hover:bg-muted transition-colors">
+                Kompanija
+              </Link>
+              <Link to="/o-alkoholu" className="block px-4 py-2 text-sm hover:bg-muted transition-colors">
+                O alkoholu
+              </Link>
+              <Link to="/standardi" className="block px-4 py-2 text-sm hover:bg-muted transition-colors">
+                Standardi
+              </Link>
+              <Link to="/karijera" className="block px-4 py-2 text-sm hover:bg-muted transition-colors">
+                Karijera
+              </Link>
+            </div>
+          </div>
           <Button asChild>
             <Link to="/kontakt">Kontakt</Link>
           </Button>

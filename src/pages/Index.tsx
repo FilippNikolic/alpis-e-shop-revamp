@@ -4,6 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Beaker, Shield, Award, Users } from "lucide-react";
+import alkohol70Img from "@/assets/products/alkohol70.png";
+import etanol96Img from "@/assets/products/etanol96.png";
+import demivodaImg from "@/assets/products/demivoda.png";
+import sirceImg from "@/assets/products/sirce.png";
+import nivalImg from "@/assets/products/nival.png";
+import nivalseptPumpImg from "@/assets/products/nivalsept-pump.png";
+import nivalseptRefillImg from "@/assets/products/nivalsept-refill.png";
+import nivalseptGelImg from "@/assets/products/nivalsept-gel.png";
 
 const Index = () => {
   const products = [
@@ -11,41 +19,49 @@ const Index = () => {
       title: "Alkohol 70%",
       description: "Razblaženi alkohol, sadržaj etanola 69,0-71,0 % v/v",
       link: "/proizvodi/alkohol70",
+      image: alkohol70Img,
     },
     {
       title: "Etanol 96%",
       description: "Visokokvalitetni etanol za industrijsku upotrebu",
       link: "/proizvodi/etanol96",
+      image: etanol96Img,
     },
     {
       title: "Demineralizovana voda",
       description: "Čista voda bez mineralnih primesa",
       link: "/proizvodi/demivoda",
+      image: demivodaImg,
     },
     {
       title: "Alkoholno sirće",
       description: "Alkoholno sirće 9% za kućnu upotrebu",
       link: "/proizvodi/alksirce",
+      image: sirceImg,
     },
     {
       title: "Nival",
       description: "Tečnost za pranje stakala vozila - letnja varijanta",
       link: "/proizvodi/nival",
+      image: nivalImg,
     },
     {
       title: "Nivalsept sa pumpicom",
       description: "Dezinfekciono sredstvo za ruke 70%",
       link: "/proizvodi/nivalsept-pumpica",
+      image: nivalseptPumpImg,
     },
     {
       title: "Nivalsept dopuna",
       description: "Refil pakovanje za ekonomičnu upotrebu",
       link: "/proizvodi/nivalsept-dopuna",
+      image: nivalseptRefillImg,
     },
     {
       title: "Nivalsept gel",
       description: "Gel za dezinfekciju ruku",
       link: "/proizvodi/nivalsept-gel",
+      image: nivalseptGelImg,
     },
   ];
 
@@ -133,7 +149,15 @@ const Index = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {products.map((product, index) => (
-                <Card key={index} className="border-0 shadow-card hover:shadow-hover transition-all duration-300 group">
+                <Card key={index} className="border-0 shadow-card hover:shadow-hover transition-all duration-300 group overflow-hidden">
+                  <div className="aspect-square w-full bg-gradient-to-br from-muted/30 to-muted/10 flex items-center justify-center p-4">
+                    <img 
+                      src={product.image}
+                      alt={product.title} 
+                      className="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+                      style={{ maxWidth: '180px', maxHeight: '180px' }}
+                    />
+                  </div>
                   <CardHeader>
                     <CardTitle className="text-lg group-hover:text-primary transition-colors">
                       {product.title}
