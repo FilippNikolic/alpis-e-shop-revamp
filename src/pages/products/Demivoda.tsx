@@ -8,6 +8,7 @@ import { RelatedProducts } from "@/components/RelatedProducts";
 import demivodaImg from "@/assets/products/demivoda.png";
 import alkohol70Img from "@/assets/products/alkohol70.png";
 import etanol96Img from "@/assets/products/etanol96.png";
+import alksirceImg from "@/assets/products/sirce.png";
 import nivalImg from "@/assets/products/nival.png";
 import heroImg from "@/assets/hero/demivoda-hero.jpg";
 
@@ -137,7 +138,7 @@ const Demivoda = () => {
             name: "Alkohol 70%",
             image: alkohol70Img,
             link: "/proizvodi/alkohol70",
-            description: "Razblaženi alkohol za industrijsku upotrebu"
+            description: "Alkohol za dezinfekciju"
           },
           {
             name: "Etanol 96%",
@@ -146,10 +147,16 @@ const Demivoda = () => {
             description: "Visokokvalitetni etanol"
           },
           {
+            name: "Alkoholno sirće",
+            image: alksirceImg,
+            link: "/proizvodi/alksirce",
+            description: "Alkoholno sirće 9%"
+          },
+          {
             name: "NIVAL",
             image: nivalImg,
             link: "/proizvodi/nival",
-            description: "Tečnost za pranje stakala"
+            description: "Tekući alkohol sa glicerinom"
           }
         ]} />
       </main>

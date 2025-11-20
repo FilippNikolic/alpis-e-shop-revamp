@@ -9,6 +9,7 @@ import etanol96Img from "@/assets/products/etanol96.png";
 import alkohol70Img from "@/assets/products/alkohol70.png";
 import demivodaImg from "@/assets/products/demivoda.png";
 import alksirceImg from "@/assets/products/sirce.png";
+import nivalImg from "@/assets/products/nival.png";
 import heroImg from "@/assets/hero/products-hero.jpg";
 
 const Etanol96 = () => {
@@ -137,7 +138,7 @@ const Etanol96 = () => {
             name: "Alkohol 70%",
             image: alkohol70Img,
             link: "/proizvodi/alkohol70",
-            description: "Razblaženi alkohol"
+            description: "Alkohol za dezinfekciju"
           },
           {
             name: "Demivoda",
@@ -150,6 +151,12 @@ const Etanol96 = () => {
             image: alksirceImg,
             link: "/proizvodi/alksirce",
             description: "Alkoholno sirće 9%"
+          },
+          {
+            name: "NIVAL",
+            image: nivalImg,
+            link: "/proizvodi/nival",
+            description: "Tekući alkohol sa glicerinom"
           }
         ]} />
       </main>
