@@ -8,6 +8,8 @@ import { RelatedProducts } from "@/components/RelatedProducts";
 import nivalseptGelImg from "@/assets/products/nivalsept-gel.png";
 import nivalseptPumpImg from "@/assets/products/nivalsept-pump.png";
 import nivalseptRefillImg from "@/assets/products/nivalsept-refill.png";
+import alkohol70Img from "@/assets/products/alkohol70.png";
+import nivalImg from "@/assets/products/nival.png";
 import heroImg from "@/assets/hero/nivalsept-hero.jpg";
 
 const NivalseptGel = () => {
@@ -153,13 +155,25 @@ const NivalseptGel = () => {
             name: "NIVALSEPT Pumpica",
             image: nivalseptPumpImg,
             link: "/proizvodi/nivalsept-pumpica",
-            description: "Sa praktičnom pumpicom"
+            description: "Pumpica za higijenu ruku"
           },
           {
             name: "NIVALSEPT Refil",
             image: nivalseptRefillImg,
             link: "/proizvodi/nivalsept-dopuna",
             description: "Dopuna za pumpice"
+          },
+          {
+            name: "Alkohol 70%",
+            image: alkohol70Img,
+            link: "/proizvodi/alkohol70",
+            description: "Dezinfekcija površina"
+          },
+          {
+            name: "NIVAL",
+            image: nivalImg,
+            link: "/proizvodi/nival",
+            description: "Tekući alkohol sa glicerinom"
           }
         ]} />
       </main>

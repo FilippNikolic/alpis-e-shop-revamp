@@ -8,6 +8,8 @@ import { RelatedProducts } from "@/components/RelatedProducts";
 import nivalseptPumpImg from "@/assets/products/nivalsept-pump.png";
 import nivalseptGelImg from "@/assets/products/nivalsept-gel.png";
 import nivalseptRefillImg from "@/assets/products/nivalsept-refill.png";
+import alkohol70Img from "@/assets/products/alkohol70.png";
+import nivalImg from "@/assets/products/nival.png";
 import heroImg from "@/assets/hero/nivalsept-hero.jpg";
 
 const NivalseptPump = () => {
@@ -141,50 +143,6 @@ const NivalseptPump = () => {
           </div>
         </section>
 
-        {/* Related Products */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">Povezani proizvodi</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="shadow-card hover:shadow-hover transition-all">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-2">Nivalsept dopuna</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Refil pakovanja za ekonomičnu upotrebu
-                  </p>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link to="/proizvodi/nivalsept-dopuna">Saznajte više</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-card hover:shadow-hover transition-all">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-2">Nivalsept gel</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Gel za dezinfekciju ruku, pogodno za česte primene
-                  </p>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link to="/proizvodi/nivalsept-gel">Saznajte više</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-card hover:shadow-hover transition-all">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-2">Alkohol 70%</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Dezinfekcija površina i medicinskih instrumenata
-                  </p>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link to="/proizvodi/alkohol70">Saznajte više</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         <RelatedProducts products={[
           {
             name: "NIVALSEPT Gel",
@@ -197,6 +155,18 @@ const NivalseptPump = () => {
             image: nivalseptRefillImg,
             link: "/proizvodi/nivalsept-dopuna",
             description: "Dopuna za pumpice"
+          },
+          {
+            name: "Alkohol 70%",
+            image: alkohol70Img,
+            link: "/proizvodi/alkohol70",
+            description: "Dezinfekcija površina"
+          },
+          {
+            name: "NIVAL",
+            image: nivalImg,
+            link: "/proizvodi/nival",
+            description: "Tekući alkohol sa glicerinom"
           }
         ]} />
       </main>
