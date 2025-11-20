@@ -76,11 +76,12 @@ const NivalseptRefill = () => {
               <div className="space-y-6">
                 <Card className="shadow-card">
                   <CardContent className="pt-6">
-                    <div className="aspect-square w-full mb-4 bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg overflow-hidden flex items-center justify-center p-6">
+                    <div className="w-full mb-4 bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg overflow-hidden flex items-center justify-center p-4" style={{ maxHeight: '280px' }}>
                       <img 
                         src={nivalseptRefillImg}
                         alt="Nivalsept dopuna" 
-                        className="w-full h-full object-contain drop-shadow-lg"
+                        className="object-contain drop-shadow-lg"
+                        style={{ maxWidth: '220px', maxHeight: '220px', width: 'auto', height: 'auto' }}
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-4">Pakovanja</h3>
