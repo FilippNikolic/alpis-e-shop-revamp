@@ -29,13 +29,13 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/proizvodi/demivoda" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Demineralizovana voda
+                <Link to="/proizvodi/nival" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Nival
                 </Link>
               </li>
               <li>
-                <Link to="/proizvodi/alksirce" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Alkoholno sirće
+                <Link to="/proizvodi/nivalsept-pumpica" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Nivalsept
                 </Link>
               </li>
             </ul>
@@ -47,6 +47,11 @@ export const Footer = () => {
               <li>
                 <Link to="/kompanija" className="text-muted-foreground hover:text-foreground transition-colors">
                   O nama
+                </Link>
+              </li>
+              <li>
+                <Link to="/o-alkoholu" className="text-muted-foreground hover:text-foreground transition-colors">
+                  O alkoholu
                 </Link>
               </li>
               <li>
