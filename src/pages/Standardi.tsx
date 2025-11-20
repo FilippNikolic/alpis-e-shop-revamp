@@ -92,84 +92,52 @@ const Standardi = () => {
                 ))}
               </div>
 
-              {/* Certificates Grid */}
-              <h3 className="text-2xl font-bold mb-6">Naši sertifikati</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                {/* IFS HPC Certificate */}
-                <Card className="shadow-card">
-                  <CardContent className="pt-6">
-                    <h4 className="text-lg font-semibold mb-4">IFS HPC Sertifikat</h4>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Međunarodni standard za proizvode za ličnu higijenu i kozmetiku
-                    </p>
-                    <Button 
-                      onClick={() => setSelectedImage(ifsHpcImg)}
-                      className="w-full"
-                      variant="outline"
-                    >
-                      <Eye className="h-4 w-4 mr-2" />
-                      Pogledaj sertifikat
-                    </Button>
-                  </CardContent>
-                </Card>
+              {/* IFS HPC Certificate */}
+              <Card className="shadow-card mb-8">
+                <CardContent className="pt-6">
+                  <h3 className="text-2xl font-bold mb-4">IFS HPC Standard</h3>
+                  <p className="text-muted-foreground mb-6">
+                    IFS HPC (International Featured Standards Household and Personal Care) je 
+                    međunarodni standard namenjen kompanijama koje proizvode proizvode za ličnu 
+                    higijenu, kozmetiku i proizvode za domaćinstvo. Ovaj standard obezbeđuje 
+                    usklađenost sa regulatornim zahtevima i garantuje bezbednost i kvalitet proizvoda.
+                  </p>
+                  
+                  <Button 
+                    onClick={() => setSelectedImage(ifsHpcImg)}
+                    className="w-full md:w-auto"
+                    size="lg"
+                  >
+                    <Eye className="h-4 w-4 mr-2" />
+                    Pogledaj sertifikat
+                  </Button>
+                </CardContent>
+              </Card>
 
-                {/* ISO 9001:2015 Certificate */}
-                <Card className="shadow-card">
-                  <CardContent className="pt-6">
-                    <h4 className="text-lg font-semibold mb-4">ISO 9001:2015 Sertifikat</h4>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Međunarodni standard za sisteme upravljanja kvalitetom
-                    </p>
-                    <Button 
-                      onClick={() => setSelectedImage(iso9001Img)}
-                      className="w-full"
-                      variant="outline"
-                    >
-                      <Eye className="h-4 w-4 mr-2" />
-                      Pogledaj sertifikat
-                    </Button>
-                  </CardContent>
-                </Card>
+              {/* ISO 9001:2015 Certificate */}
+              <Card className="shadow-card mb-8">
+                <CardContent className="pt-6">
+                  <h3 className="text-2xl font-bold mb-4">ISO 9001:2015 Standard</h3>
+                  <p className="text-muted-foreground mb-6">
+                    ISO 9001:2015 je međunarodni standard koji definiše zahteve za sistem upravljanja 
+                    kvalitetom. Ovaj standard pomaže organizacijama da osiguraju da njihovi proizvodi 
+                    i usluge dosljedno ispunjavaju zahteve kupaca i da se kontinuirano poboljšava 
+                    kvalitet poslovanja.
+                  </p>
+                  
+                  <Button 
+                    onClick={() => setSelectedImage(iso9001Img)}
+                    className="w-full md:w-auto"
+                    size="lg"
+                  >
+                    <Eye className="h-4 w-4 mr-2" />
+                    Pogledaj sertifikat
+                  </Button>
+                </CardContent>
+              </Card>
 
-                {/* HACCP Certificate */}
-                <Card className="shadow-card">
-                  <CardContent className="pt-6">
-                    <h4 className="text-lg font-semibold mb-4">HACCP Sertifikat</h4>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Sistem bezbednosti hrane i analiza kritičnih kontrolnih tačaka
-                    </p>
-                    <Button 
-                      onClick={() => setSelectedImage(haccpImg)}
-                      className="w-full"
-                      variant="outline"
-                    >
-                      <Eye className="h-4 w-4 mr-2" />
-                      Pogledaj sertifikat
-                    </Button>
-                  </CardContent>
-                </Card>
-
-                {/* TQM Certificate */}
-                <Card className="shadow-card">
-                  <CardContent className="pt-6">
-                    <h4 className="text-lg font-semibold mb-4">TQM Sertifikat</h4>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Total Quality Management - sveobuhvatno upravljanje kvalitetom
-                    </p>
-                    <Button 
-                      onClick={() => setSelectedImage(tqmImg)}
-                      className="w-full"
-                      variant="outline"
-                    >
-                      <Eye className="h-4 w-4 mr-2" />
-                      Pogledaj sertifikat
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* HACCP Details */}
-              <Card className="shadow-card mb-12">
+              {/* HACCP Certificate */}
+              <Card className="shadow-card mb-8">
                 <CardContent className="pt-6">
                   <h3 className="text-2xl font-bold mb-4">O HACCP standardu</h3>
                   <p className="text-muted-foreground mb-6">
@@ -180,7 +148,7 @@ const Standardi = () => {
                   </p>
                   
                   <h4 className="font-semibold mb-3">HACCP se zasniva na sledećim principima:</h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-6">
                     {haccpPrinciples.map((principle, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -188,6 +156,37 @@ const Standardi = () => {
                       </li>
                     ))}
                   </ul>
+
+                  <Button 
+                    onClick={() => setSelectedImage(haccpImg)}
+                    className="w-full md:w-auto"
+                    size="lg"
+                  >
+                    <Eye className="h-4 w-4 mr-2" />
+                    Pogledaj sertifikat
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* TQM Certificate */}
+              <Card className="shadow-card mb-12">
+                <CardContent className="pt-6">
+                  <h3 className="text-2xl font-bold mb-4">TQM Sertifikat</h3>
+                  <p className="text-muted-foreground mb-6">
+                    TQM (Total Quality Management) je sveobuhvatni pristup upravljanju kvalitetom koji 
+                    uključuje sve zaposlene u organizaciji. Ovaj pristup se fokusira na kontinuirano 
+                    poboljšanje procesa, proizvoda i usluga kroz sistematski pristup koji obuhvata 
+                    planiranje, kontrolu i unapređenje kvaliteta na svim nivoima organizacije.
+                  </p>
+                  
+                  <Button 
+                    onClick={() => setSelectedImage(tqmImg)}
+                    className="w-full md:w-auto"
+                    size="lg"
+                  >
+                    <Eye className="h-4 w-4 mr-2" />
+                    Pogledaj sertifikat
+                  </Button>
                 </CardContent>
               </Card>
 
