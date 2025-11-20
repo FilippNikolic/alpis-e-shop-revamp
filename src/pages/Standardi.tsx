@@ -150,7 +150,6 @@ const Standardi = () => {
                   
                   <Button 
                     onClick={() => setSelectedImage(ifsHpcImg)}
-                    className="w-full md:w-auto"
                     size="lg"
                   >
                     <Eye className="h-4 w-4 mr-2" />
@@ -172,7 +171,6 @@ const Standardi = () => {
                   
                   <Button 
                     onClick={() => setSelectedImage(iso9001Img)}
-                    className="w-full md:w-auto"
                     size="lg"
                   >
                     <Eye className="h-4 w-4 mr-2" />
@@ -204,7 +202,6 @@ const Standardi = () => {
 
                   <Button 
                     onClick={() => setSelectedImage(haccpImg)}
-                    className="w-full md:w-auto"
                     size="lg"
                   >
                     <Eye className="h-4 w-4 mr-2" />
@@ -226,7 +223,6 @@ const Standardi = () => {
                   
                   <Button 
                     onClick={() => setSelectedImage(tqmImg)}
-                    className="w-full md:w-auto"
                     size="lg"
                   >
                     <Eye className="h-4 w-4 mr-2" />
