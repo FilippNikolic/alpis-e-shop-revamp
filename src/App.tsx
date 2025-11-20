@@ -9,9 +9,14 @@ import Alkohol70 from "./pages/products/Alkohol70";
 import Etanol96 from "./pages/products/Etanol96";
 import Demivoda from "./pages/products/Demivoda";
 import Alksirce from "./pages/products/Alksirce";
+import Nival from "./pages/products/Nival";
+import NivalseptPump from "./pages/products/NivalseptPump";
+import NivalseptRefill from "./pages/products/NivalseptRefill";
+import NivalseptGel from "./pages/products/NivalseptGel";
 import Kompanija from "./pages/Kompanija";
 import Karijera from "./pages/Karijera";
 import Kontakt from "./pages/Kontakt";
+import OAlkoholu from "./pages/OAlkoholu";
 
 const queryClient = new QueryClient();
 
@@ -27,9 +32,14 @@ const App = () => (
           <Route path="/proizvodi/etanol96" element={<Etanol96 />} />
           <Route path="/proizvodi/demivoda" element={<Demivoda />} />
           <Route path="/proizvodi/alksirce" element={<Alksirce />} />
+          <Route path="/proizvodi/nival" element={<Nival />} />
+          <Route path="/proizvodi/nivalsept-pumpica" element={<NivalseptPump />} />
+          <Route path="/proizvodi/nivalsept-dopuna" element={<NivalseptRefill />} />
+          <Route path="/proizvodi/nivalsept-gel" element={<NivalseptGel />} />
           <Route path="/kompanija" element={<Kompanija />} />
           <Route path="/karijera" element={<Karijera />} />
           <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/o-alkoholu" element={<OAlkoholu />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

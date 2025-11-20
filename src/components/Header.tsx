@@ -26,21 +26,41 @@ export const Header = () => {
             <button className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
               Proizvodi
             </button>
-            <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-popover border border-border rounded-lg shadow-lg py-2">
+            <div className="absolute left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-popover border border-border rounded-lg shadow-lg py-2 z-50">
+              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">Alkohol i Etanol</div>
               <Link to="/proizvodi/alkohol70" className="block px-4 py-2 text-sm hover:bg-muted transition-colors">
                 Alkohol 70%
               </Link>
               <Link to="/proizvodi/etanol96" className="block px-4 py-2 text-sm hover:bg-muted transition-colors">
                 Etanol 96%
               </Link>
+              <div className="border-t border-border my-2"></div>
+              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">Ostali proizvodi</div>
               <Link to="/proizvodi/demivoda" className="block px-4 py-2 text-sm hover:bg-muted transition-colors">
                 Demineralizovana voda
               </Link>
               <Link to="/proizvodi/alksirce" className="block px-4 py-2 text-sm hover:bg-muted transition-colors">
                 Alkoholno sirće
               </Link>
+              <Link to="/proizvodi/nival" className="block px-4 py-2 text-sm hover:bg-muted transition-colors">
+                Nival (tečnost za stakla)
+              </Link>
+              <div className="border-t border-border my-2"></div>
+              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">Nivalsept serija</div>
+              <Link to="/proizvodi/nivalsept-pumpica" className="block px-4 py-2 text-sm hover:bg-muted transition-colors">
+                Nivalsept sa pumpicom
+              </Link>
+              <Link to="/proizvodi/nivalsept-dopuna" className="block px-4 py-2 text-sm hover:bg-muted transition-colors">
+                Nivalsept dopuna
+              </Link>
+              <Link to="/proizvodi/nivalsept-gel" className="block px-4 py-2 text-sm hover:bg-muted transition-colors">
+                Nivalsept gel
+              </Link>
             </div>
           </div>
+          <Link to="/o-alkoholu" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+            O alkoholu
+          </Link>
           <Link to="/kompanija" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
             Kompanija
           </Link>
@@ -82,7 +102,22 @@ export const Header = () => {
               <Link to="/proizvodi/alksirce" className="block text-sm py-2 pl-4">
                 Alkoholno sirće
               </Link>
+              <Link to="/proizvodi/nival" className="block text-sm py-2 pl-4">
+                Nival
+              </Link>
+              <Link to="/proizvodi/nivalsept-pumpica" className="block text-sm py-2 pl-4">
+                Nivalsept sa pumpicom
+              </Link>
+              <Link to="/proizvodi/nivalsept-dopuna" className="block text-sm py-2 pl-4">
+                Nivalsept dopuna
+              </Link>
+              <Link to="/proizvodi/nivalsept-gel" className="block text-sm py-2 pl-4">
+                Nivalsept gel
+              </Link>
             </div>
+            <Link to="/o-alkoholu" className="block text-sm font-medium py-2">
+              O alkoholu
+            </Link>
             <Link to="/kompanija" className="block text-sm font-medium py-2">
               Kompanija
             </Link>

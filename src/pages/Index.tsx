@@ -27,6 +27,26 @@ const Index = () => {
       description: "Alkoholno sirće 9% za kućnu upotrebu",
       link: "/proizvodi/alksirce",
     },
+    {
+      title: "Nival",
+      description: "Tečnost za pranje stakala vozila - letnja varijanta",
+      link: "/proizvodi/nival",
+    },
+    {
+      title: "Nivalsept sa pumpicom",
+      description: "Dezinfekciono sredstvo za ruke 70%",
+      link: "/proizvodi/nivalsept-pumpica",
+    },
+    {
+      title: "Nivalsept dopuna",
+      description: "Refil pakovanje za ekonomičnu upotrebu",
+      link: "/proizvodi/nivalsept-dopuna",
+    },
+    {
+      title: "Nivalsept gel",
+      description: "Gel za dezinfekciju ruku",
+      link: "/proizvodi/nivalsept-gel",
+    },
   ];
 
   const features = [
@@ -111,19 +131,19 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {products.map((product, index) => (
                 <Card key={index} className="border-0 shadow-card hover:shadow-hover transition-all duration-300 group">
                   <CardHeader>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
                       {product.title}
                     </CardTitle>
-                    <CardDescription className="text-base">
+                    <CardDescription className="text-sm">
                       {product.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button asChild variant="outline" className="w-full">
+                    <Button asChild variant="outline" className="w-full" size="sm">
                       <Link to={product.link}>Saznajte više</Link>
                     </Button>
                   </CardContent>
