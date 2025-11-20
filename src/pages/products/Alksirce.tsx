@@ -9,6 +9,7 @@ import sirceImg from "@/assets/products/sirce.png";
 import alkohol70Img from "@/assets/products/alkohol70.png";
 import etanol96Img from "@/assets/products/etanol96.png";
 import demivodaImg from "@/assets/products/demivoda.png";
+import heroImg from "@/assets/hero/sirce-hero.jpg";
 
 const Alksirce = () => {
   const specifications = [
@@ -32,13 +33,19 @@ const Alksirce = () => {
       <Header />
       
       <main className="flex-1">
-        <section className="py-16 md:py-24 gradient-hero">
-          <div className="container mx-auto px-4">
+        <section className="relative py-32 md:py-40 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImg})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
                 Alkoholno sirće 9%
               </h1>
-              <p className="text-xl text-white/90">
+              <p className="text-xl md:text-2xl text-white/95 animate-fade-in">
                 Prirodno sirće za kućnu i industrijsku upotrebu
               </p>
             </div>

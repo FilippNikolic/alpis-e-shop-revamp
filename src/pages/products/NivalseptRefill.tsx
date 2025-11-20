@@ -8,6 +8,7 @@ import { RelatedProducts } from "@/components/RelatedProducts";
 import nivalseptRefillImg from "@/assets/products/nivalsept-refill.png";
 import nivalseptPumpImg from "@/assets/products/nivalsept-pump.png";
 import nivalseptGelImg from "@/assets/products/nivalsept-gel.png";
+import heroImg from "@/assets/hero/nivalsept-hero.jpg";
 
 const NivalseptRefill = () => {
   const packaging = [
@@ -20,13 +21,19 @@ const NivalseptRefill = () => {
       <Header />
       
       <main className="flex-1">
-        <section className="py-16 md:py-24 gradient-hero">
-          <div className="container mx-auto px-4">
+        <section className="relative py-32 md:py-40 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImg})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
                 NIVALSEPT 70% Dopuna
               </h1>
-              <p className="text-xl text-white/90">
+              <p className="text-xl md:text-2xl text-white/95 animate-fade-in">
                 Refil pakovanje za ekonomičnu upotrebu
               </p>
             </div>
