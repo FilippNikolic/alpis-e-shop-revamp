@@ -79,15 +79,32 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
-                <span>Dunavska 77, Kovin, Srbija</span>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=Dunavska+77+Kovin+Srbija"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Dunavska 77, Kovin, Srbija
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <span>+381 13 745 600</span>
+                <a 
+                  href="tel:+381137456600"
+                  className="hover:text-primary transition-colors"
+                >
+                  +381 13 745 600
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span>office@alpis.rs</span>
+                <a 
+                  href="mailto:office@alpis.rs"
+                  className="hover:text-primary transition-colors"
+                >
+                  office@alpis.rs
+                </a>
               </li>
             </ul>
           </div>

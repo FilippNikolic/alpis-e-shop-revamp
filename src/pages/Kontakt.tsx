@@ -37,11 +37,16 @@ const Kontakt = () => {
                   <CardContent className="pt-6">
                     <MapPin className="h-10 w-10 text-primary mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Adresa</h3>
-                    <p className="text-muted-foreground">
+                    <a 
+                      href="https://www.google.com/maps/search/?api=1&query=Dunavska+77+Kovin+Srbija"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
                       Dunavska 77<br />
                       26220 Kovin<br />
                       Srbija
-                    </p>
+                    </a>
                   </CardContent>
                 </Card>
 
@@ -49,12 +54,18 @@ const Kontakt = () => {
                   <CardContent className="pt-6">
                     <Phone className="h-10 w-10 text-primary mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Telefon</h3>
-                    <p className="text-muted-foreground mb-2">
+                    <a 
+                      href="tel:+381137456600" 
+                      className="block text-muted-foreground hover:text-primary transition-colors mb-2"
+                    >
                       +381 13 745 600
-                    </p>
-                    <p className="text-muted-foreground">
+                    </a>
+                    <a 
+                      href="tel:+381137456601" 
+                      className="block text-muted-foreground hover:text-primary transition-colors"
+                    >
                       +381 13 745 601
-                    </p>
+                    </a>
                   </CardContent>
                 </Card>
 
@@ -62,12 +73,18 @@ const Kontakt = () => {
                   <CardContent className="pt-6">
                     <Mail className="h-10 w-10 text-primary mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Email</h3>
-                    <p className="text-muted-foreground mb-2">
+                    <a 
+                      href="mailto:office@alpis.rs" 
+                      className="block text-muted-foreground hover:text-primary transition-colors mb-2"
+                    >
                       office@alpis.rs
-                    </p>
-                    <p className="text-muted-foreground">
+                    </a>
+                    <a 
+                      href="mailto:info@alpis.rs" 
+                      className="block text-muted-foreground hover:text-primary transition-colors"
+                    >
                       info@alpis.rs
-                    </p>
+                    </a>
                   </CardContent>
                 </Card>
 
