@@ -55,6 +55,11 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/standardi" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Standardi i nagrade
+                </Link>
+              </li>
+              <li>
                 <Link to="/karijera" className="text-muted-foreground hover:text-foreground transition-colors">
                   Karijera
                 </Link>
