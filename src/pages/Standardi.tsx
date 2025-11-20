@@ -1,7 +1,10 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Shield, CheckCircle2, ExternalLink } from "lucide-react";
+import { Award, Shield, CheckCircle2, ExternalLink, Eye } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { useState } from "react";
 import ifsHpcImg from "@/assets/certificates/ifs-hpc.png";
 import tqmImg from "@/assets/certificates/tqm.jpg";
 import iso9001Img from "@/assets/certificates/iso-9001.png";
@@ -9,6 +12,8 @@ import haccpImg from "@/assets/certificates/haccp.png";
 import nagrada2024Img from "@/assets/certificates/nagrada-2024.png";
 
 const Standardi = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   const standards = [
     {
       icon: Shield,
@@ -94,14 +99,17 @@ const Standardi = () => {
                 <Card className="shadow-card">
                   <CardContent className="pt-6">
                     <h4 className="text-lg font-semibold mb-4">IFS HPC Sertifikat</h4>
-                    <div className="bg-muted/30 rounded-lg overflow-hidden p-4 flex items-center justify-center">
-                      <img 
-                        src={ifsHpcImg}
-                        alt="IFS HPC Certificate" 
-                        className="w-full h-auto"
-                        style={{ maxWidth: '300px' }}
-                      />
-                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Međunarodni standard za proizvode za ličnu higijenu i kozmetiku
+                    </p>
+                    <Button 
+                      onClick={() => setSelectedImage(ifsHpcImg)}
+                      className="w-full"
+                      variant="outline"
+                    >
+                      <Eye className="h-4 w-4 mr-2" />
+                      Pogledaj sertifikat
+                    </Button>
                   </CardContent>
                 </Card>
 
@@ -109,14 +117,17 @@ const Standardi = () => {
                 <Card className="shadow-card">
                   <CardContent className="pt-6">
                     <h4 className="text-lg font-semibold mb-4">ISO 9001:2015 Sertifikat</h4>
-                    <div className="bg-muted/30 rounded-lg overflow-hidden p-4 flex items-center justify-center">
-                      <img 
-                        src={iso9001Img}
-                        alt="ISO 9001:2015 Certificate" 
-                        className="w-full h-auto"
-                        style={{ maxWidth: '250px' }}
-                      />
-                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Međunarodni standard za sisteme upravljanja kvalitetom
+                    </p>
+                    <Button 
+                      onClick={() => setSelectedImage(iso9001Img)}
+                      className="w-full"
+                      variant="outline"
+                    >
+                      <Eye className="h-4 w-4 mr-2" />
+                      Pogledaj sertifikat
+                    </Button>
                   </CardContent>
                 </Card>
 
@@ -124,14 +135,17 @@ const Standardi = () => {
                 <Card className="shadow-card">
                   <CardContent className="pt-6">
                     <h4 className="text-lg font-semibold mb-4">HACCP Sertifikat</h4>
-                    <div className="bg-muted/30 rounded-lg overflow-hidden p-4 flex items-center justify-center">
-                      <img 
-                        src={haccpImg}
-                        alt="HACCP Certificate" 
-                        className="w-full h-auto"
-                        style={{ maxWidth: '250px' }}
-                      />
-                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Sistem bezbednosti hrane i analiza kritičnih kontrolnih tačaka
+                    </p>
+                    <Button 
+                      onClick={() => setSelectedImage(haccpImg)}
+                      className="w-full"
+                      variant="outline"
+                    >
+                      <Eye className="h-4 w-4 mr-2" />
+                      Pogledaj sertifikat
+                    </Button>
                   </CardContent>
                 </Card>
 
@@ -139,14 +153,17 @@ const Standardi = () => {
                 <Card className="shadow-card">
                   <CardContent className="pt-6">
                     <h4 className="text-lg font-semibold mb-4">TQM Sertifikat</h4>
-                    <div className="bg-muted/30 rounded-lg overflow-hidden p-4 flex items-center justify-center">
-                      <img 
-                        src={tqmImg}
-                        alt="TQM Certificate" 
-                        className="w-full h-auto"
-                        style={{ maxWidth: '350px' }}
-                      />
-                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Total Quality Management - sveobuhvatno upravljanje kvalitetom
+                    </p>
+                    <Button 
+                      onClick={() => setSelectedImage(tqmImg)}
+                      className="w-full"
+                      variant="outline"
+                    >
+                      <Eye className="h-4 w-4 mr-2" />
+                      Pogledaj sertifikat
+                    </Button>
                   </CardContent>
                 </Card>
               </div>
@@ -235,6 +252,19 @@ const Standardi = () => {
       </main>
 
       <Footer />
+
+      {/* Image Dialog */}
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-4xl">
+          {selectedImage && (
+            <img 
+              src={selectedImage} 
+              alt="Sertifikat" 
+              className="w-full h-auto"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
