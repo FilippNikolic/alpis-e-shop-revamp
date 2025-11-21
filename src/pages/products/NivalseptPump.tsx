@@ -50,42 +50,58 @@ const NivalseptPump = () => {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
-                  <p className="mb-4">
-                    <strong className="text-foreground">NIVALSEPT 70%</strong> je gotov radni rastvor 
-                    za dezinfekciju zdrave kože ruku u zdravstvu, veterinarskoj medicini, prehrambenoj 
-                    industriji, hotelijerstvu i ugostiteljstvu, predškolskim i školskim ustanovama, 
-                    javnoj higijeni, domaćinstvu, itd.
-                  </p>
-
-                  <div className="bg-primary/10 border-l-4 border-primary p-4 rounded my-6">
-                    <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                      <Droplets className="h-5 w-5" />
-                      Uputstvo za upotrebu:
-                    </h3>
-                    <p className="text-sm">
-                      NIVALSEPT 70% se ravnomerno prska iz boce sa mehaničkom pumpom na suve ruke, 
-                      a zatim se utrljava u kožu. Potrebna doza su 2 pritiska. Ostavite proizvod 1 
-                      minut da se prirodno osuši. Nije potrebno ispiranje ruku. Proizvod koristite 
-                      po potrebi.
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
+                  <div className="prose prose-lg max-w-none text-muted-foreground">
+                    <p className="mb-4">
+                      <strong className="text-foreground">NIVALSEPT 70%</strong> je gotov radni rastvor 
+                      za dezinfekciju zdrave kože ruku u zdravstvu, veterinarskoj medicini, prehrambenoj 
+                      industriji, hotelijerstvu i ugostiteljstvu, predškolskim i školskim ustanovama, 
+                      javnoj higijeni, domaćinstvu, itd.
                     </p>
-                  </div>
 
-                  <div className="bg-destructive/10 border-l-4 border-destructive p-4 rounded my-6">
-                    <h3 className="font-semibold text-destructive mb-2 flex items-center gap-2">
-                      <AlertCircle className="h-5 w-5" />
-                      Napomena:
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      NIVALSEPT 70% je namenjen samo za spoljnu upotrebu. Izbegavajte kontakt sa 
-                      očima, ušima, sluzokožama (nos, usta...).
-                    </p>
+                    <div className="bg-primary/10 border-l-4 border-primary p-4 rounded my-6">
+                      <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                        <Droplets className="h-5 w-5" />
+                        Uputstvo za upotrebu:
+                      </h3>
+                      <p className="text-sm">
+                        NIVALSEPT 70% se ravnomerno prska iz boce sa mehaničkom pumpom na suve ruke, 
+                        a zatim se utrljava u kožu. Potrebna doza su 2 pritiska. Ostavite proizvod 1 
+                        minut da se prirodno osuši. Nije potrebno ispiranje ruku. Proizvod koristite 
+                        po potrebi.
+                      </p>
+                    </div>
+
+                    <div className="bg-destructive/10 border-l-4 border-destructive p-4 rounded my-6">
+                      <h3 className="font-semibold text-destructive mb-2 flex items-center gap-2">
+                        <AlertCircle className="h-5 w-5" />
+                        Napomena:
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        NIVALSEPT 70% je namenjen samo za spoljnu upotrebu. Izbegavajte kontakt sa 
+                        očima, ušima, sluzokožama (nos, usta...).
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="mt-8">
+                <Card className="shadow-card lg:block">
+                  <CardContent className="pt-6">
+                    <h3 className="text-xl font-semibold mb-4">Područja primene</h3>
+                    <ul className="space-y-3">
+                      {uses.map((use, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{use}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <div>
                   <Button asChild size="lg">
                     <Link to="/kontakt">Pošaljite upit</Link>
                   </Button>
@@ -103,15 +119,6 @@ const NivalseptPump = () => {
                         style={{ maxWidth: '220px', maxHeight: '220px', width: 'auto', height: 'auto' }}
                       />
                     </div>
-                    <h3 className="text-xl font-semibold mb-4">Područja primene</h3>
-                    <ul className="space-y-3">
-                      {uses.map((use, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{use}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </CardContent>
                 </Card>
 

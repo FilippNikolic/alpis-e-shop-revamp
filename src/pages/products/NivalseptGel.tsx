@@ -48,48 +48,64 @@ const NivalseptGel = () => {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
-                  <p className="mb-4">
-                    <strong className="text-foreground">Nivalsept gel za dezinfekciju</strong> zdrave 
-                    kože ruku je formulisan tako da efikasno kontroliše bakterije i gljivice. Gel 
-                    tekstura omogućava jednostavnu i preciznu primenu.
-                  </p>
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
+                  <div className="prose prose-lg max-w-none text-muted-foreground">
+                    <p className="mb-4">
+                      <strong className="text-foreground">Nivalsept gel za dezinfekciju</strong> zdrave 
+                      kože ruku je formulisan tako da efikasno kontroliše bakterije i gljivice. Gel 
+                      tekstura omogućava jednostavnu i preciznu primenu.
+                    </p>
 
-                  <div className="bg-primary/10 border-l-4 border-primary p-4 rounded my-6">
-                    <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                      <Droplets className="h-5 w-5" />
-                      Uputstvo za upotrebu:
-                    </h3>
-                    <p className="text-sm">
-                      Nanesete u tankom sloju na šake i ravnomerno utrljavajte 1 minut dok se čitava 
-                      površina šaka ne zasiti. Za jednu upotrebu dovoljno je iscediti 1 do 2 ml gela. 
-                      Ostavite proizvod da se prirodno osuši. Nije potrebno ispiranje ruku. Proizvod 
-                      koristite po potrebi.
+                    <div className="bg-primary/10 border-l-4 border-primary p-4 rounded my-6">
+                      <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                        <Droplets className="h-5 w-5" />
+                        Uputstvo za upotrebu:
+                      </h3>
+                      <p className="text-sm">
+                        Nanesete u tankom sloju na šake i ravnomerno utrljavajte 1 minut dok se čitava 
+                        površina šaka ne zasiti. Za jednu upotrebu dovoljno je iscediti 1 do 2 ml gela. 
+                        Ostavite proizvod da se prirodno osuši. Nije potrebno ispiranje ruku. Proizvod 
+                        koristite po potrebi.
+                      </p>
+                    </div>
+
+                    <div className="bg-destructive/10 border-l-4 border-destructive p-4 rounded my-6">
+                      <h3 className="font-semibold text-destructive mb-2 flex items-center gap-2">
+                        <AlertCircle className="h-5 w-5" />
+                        Napomena:
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        Samo za spoljnu upotrebu. Izbegavajte kontakt sa očima, ušima, sluzokožama 
+                        (nos, usta).
+                      </p>
+                    </div>
+
+                    <p className="text-muted-foreground">
+                      Gel formula je posebno pogodna za osobe koje često peru i dezinfikuju ruke, 
+                      jer ne isušuje kožu koliko alkoholni rastvori. Idealan je za upotrebu u 
+                      zdravstvu, kozmetičkim salonima i svim oblastima gde je potrebna redovna 
+                      higijena ruku.
                     </p>
                   </div>
-
-                  <div className="bg-destructive/10 border-l-4 border-destructive p-4 rounded my-6">
-                    <h3 className="font-semibold text-destructive mb-2 flex items-center gap-2">
-                      <AlertCircle className="h-5 w-5" />
-                      Napomena:
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Samo za spoljnu upotrebu. Izbegavajte kontakt sa očima, ušima, sluzokožama 
-                      (nos, usta).
-                    </p>
-                  </div>
-
-                  <p className="text-muted-foreground">
-                    Gel formula je posebno pogodna za osobe koje često peru i dezinfikuju ruke, 
-                    jer ne isušuje kožu koliko alkoholni rastvori. Idealan je za upotrebu u 
-                    zdravstvu, kozmetičkim salonima i svim oblastima gde je potrebna redovna 
-                    higijena ruku.
-                  </p>
                 </div>
 
-                <div className="mt-8">
+                <Card className="shadow-card lg:block">
+                  <CardContent className="pt-6">
+                    <h3 className="text-xl font-semibold mb-2">Područja primene</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li>• Medicinske ustanove</li>
+                      <li>• Stomatološke ordinacije</li>
+                      <li>• Kozmetički saloni</li>
+                      <li>• Frizerski saloni</li>
+                      <li>• Prehrambena industrija</li>
+                      <li>• Kućna upotreba</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <div>
                   <Button asChild size="lg">
                     <Link to="/kontakt">Pošaljite upit</Link>
                   </Button>
@@ -132,19 +148,6 @@ const NivalseptGel = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card bg-secondary/50">
-                  <CardContent className="pt-6">
-                    <h3 className="text-xl font-semibold mb-2">Područja primene</h3>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Medicinske ustanove</li>
-                      <li>• Stomatološke ordinacije</li>
-                      <li>• Kozmetički saloni</li>
-                      <li>• Frizerski saloni</li>
-                      <li>• Prehrambena industrija</li>
-                      <li>• Kućna upotreba</li>
-                    </ul>
-                  </CardContent>
-                </Card>
               </div>
             </div>
           </div>

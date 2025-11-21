@@ -58,25 +58,41 @@ const Alkohol70 = () => {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
-                  <p className="mb-4">
-                    Alkohol 70% je razblaženi etanol koji se koristi u različite svrhe. 
-                    Ovaj proizvod predstavlja optimalnu koncentraciju za dezinfekciju, 
-                    jer omogućava efikasno prodiranje kroz ćelijsku membranu mikroorganizama.
-                  </p>
-                  <p className="mb-4">
-                    Proizvod je bezbedан za upotrebu na različitim površinama i materijama, 
-                    čime je idealan za industrijsku primenu. Pakovan je u praktične boce 
-                    od 1 litra koje omogućavaju jednostavnu upotrebu i skladištenje.
-                  </p>
-                  <p>
-                    NAPOMENA: Proizvod nije namenjen za ljudsku upotrebu (piće).
-                  </p>
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
+                  <div className="prose prose-lg max-w-none text-muted-foreground">
+                    <p className="mb-4">
+                      Alkohol 70% je razblaženi etanol koji se koristi u različite svrhe. 
+                      Ovaj proizvod predstavlja optimalnu koncentraciju za dezinfekciju, 
+                      jer omogućava efikasno prodiranje kroz ćelijsku membranu mikroorganizama.
+                    </p>
+                    <p className="mb-4">
+                      Proizvod je bezbedан za upotrebu na različitim površinama i materijama, 
+                      čime je idealan za industrijsku primenu. Pakovan je u praktične boce 
+                      od 1 litra koje omogućavaju jednostavnu upotrebu i skladištenje.
+                    </p>
+                    <p>
+                      NAPOMENA: Proizvod nije namenjen za ljudsku upotrebu (piće).
+                    </p>
+                  </div>
                 </div>
 
-                <div className="mt-8">
+                <Card className="shadow-card lg:block">
+                  <CardContent className="pt-6">
+                    <h3 className="text-xl font-semibold mb-4">Primena</h3>
+                    <ul className="space-y-3">
+                      {uses.map((use, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{use}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <div>
                   <Button asChild size="lg">
                     <Link to="/kontakt">Pošaljite upit</Link>
                   </Button>
@@ -100,20 +116,6 @@ const Alkohol70 = () => {
                         <li key={index} className="flex items-start gap-3">
                           <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                           <span className="text-muted-foreground">{spec}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="shadow-card">
-                  <CardContent className="pt-6">
-                    <h3 className="text-xl font-semibold mb-4">Primena</h3>
-                    <ul className="space-y-3">
-                      {uses.map((use, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{use}</span>
                         </li>
                       ))}
                     </ul>
