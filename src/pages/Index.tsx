@@ -111,8 +111,16 @@ const Index = () => {
                 Visokokvalitetni industrijski proizvodi za različite namene
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-                <Button asChild size="lg" variant="secondary" className="text-lg">
-                  <Link to="#proizvodi">Pogledajte proizvode</Link>
+                <Button 
+                  size="lg" 
+                  variant="secondary" 
+                  className="text-lg"
+                  onClick={() => {
+                    const element = document.getElementById('proizvodi');
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Pogledajte proizvode
                 </Button>
                 <Button asChild size="lg" variant="outline" className="text-lg bg-white/10 border-white text-white hover:bg-white hover:text-primary">
                   <Link to="/kontakt">Kontaktirajte nas</Link>

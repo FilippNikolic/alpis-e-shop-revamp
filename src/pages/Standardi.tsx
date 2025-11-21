@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Shield, CheckCircle2, ExternalLink, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
 import ifsHpcImg from "@/assets/certificates/ifs-hpc.png";
 import tqmImg from "@/assets/certificates/tqm.jpg";
@@ -363,14 +363,20 @@ const Standardi = () => {
 
       {/* Image Dialog */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-2xl">
-          {selectedImage && (
-            <img 
-              src={selectedImage} 
-              alt="Sertifikat" 
-              className="w-full h-auto"
-            />
-          )}
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>Sertifikat</DialogTitle>
+          </DialogHeader>
+          <div className="flex items-center justify-center">
+            {selectedImage && (
+              <img 
+                src={selectedImage} 
+                alt="Sertifikat" 
+                className="max-w-full h-auto rounded-lg"
+                style={{ maxHeight: '400px' }}
+              />
+            )}
+          </div>
         </DialogContent>
       </Dialog>
     </div>
