@@ -373,7 +373,11 @@ const Standardi = () => {
                 src={selectedImage} 
                 alt="Sertifikat" 
                 className="max-w-full h-auto rounded-lg"
-                style={{ maxHeight: '550px' }}
+                style={{ 
+                  maxHeight: selectedImage === tqmImg ? '550px' : '450px',
+                  width: selectedImage === tqmImg ? 'auto' : '100%',
+                  maxWidth: selectedImage === tqmImg ? '100%' : '400px'
+                }}
               />
             )}
           </div>
