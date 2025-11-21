@@ -54,44 +54,62 @@ const TehnickiAlkohol = () => {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
-                  <p className="mb-4">
-                    <strong className="text-foreground">Tehnički alkohol</strong> se dobija kao 
-                    nusproizvod u proizvodnom procesu etil-alkohola. Sadrži prosečno 92% v/v 
-                    etil-alkohola. Ima karakterističan miris i blago je obojen.
-                  </p>
-
-                  <div className="bg-destructive/10 border-l-4 border-destructive p-4 rounded my-6">
-                    <h3 className="font-semibold text-destructive mb-2 flex items-center gap-2">
-                      <AlertTriangle className="h-5 w-5" />
-                      VAŽNO UPOZORENJE:
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Tehnički alkohol sadrži veći udeo aldehida, estara, viših alkohola i metanola. 
-                      Upotreba u prehrambenoj industriji je <strong>ZABRANJENA</strong>.
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
+                  <div className="prose prose-lg max-w-none text-muted-foreground">
+                    <p className="mb-4">
+                      <strong className="text-foreground">Tehnički alkohol</strong> se dobija kao 
+                      nusproizvod u proizvodnom procesu etil-alkohola. Sadrži prosečno 92% v/v 
+                      etil-alkohola. Ima karakterističan miris i blago je obojen.
                     </p>
-                  </div>
 
-                  <p className="mb-4">
-                    Proizvod se koristi u mašinskoj i hemijskoj industriji kao odmašćivač, 
-                    rastvarač i za druge industrijske potrebe. Dnevno se proizvodi oko 1800 litara.
-                  </p>
+                    <div className="bg-destructive/10 border-l-4 border-destructive p-4 rounded my-6">
+                      <h3 className="font-semibold text-destructive mb-2 flex items-center gap-2">
+                        <AlertTriangle className="h-5 w-5" />
+                        VAŽNO UPOZORENJE:
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        Tehnički alkohol sadrži veći udeo aldehida, estara, viših alkohola i metanola. 
+                        Upotreba u prehrambenoj industriji je <strong>ZABRANJENA</strong>.
+                      </p>
+                    </div>
 
-                  <div className="bg-primary/10 border-l-4 border-primary p-4 rounded my-6">
-                    <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                      <Factory className="h-5 w-5 text-primary" />
-                      Prodaja:
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Tehnički alkohol se prodaje <strong>isključivo u rinfuzi (bulk)</strong>. 
-                      Nije dostupan u maloprodajnim pakovanjima.
+                    <p className="mb-4">
+                      Proizvod se koristi u mašinskoj i hemijskoj industriji kao odmašćivač, 
+                      rastvarač i za druge industrijske potrebe. Dnevno se proizvodi oko 1800 litara.
                     </p>
+
+                    <div className="bg-primary/10 border-l-4 border-primary p-4 rounded my-6">
+                      <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                        <Factory className="h-5 w-5 text-primary" />
+                        Prodaja:
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        Tehnički alkohol se prodaje <strong>isključivo u rinfuzi (bulk)</strong>. 
+                        Nije dostupan u maloprodajnim pakovanjima.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="mt-8">
+                <Card className="shadow-card lg:block">
+                  <CardContent className="pt-6">
+                    <h3 className="text-xl font-semibold mb-4">Područja primene</h3>
+                    <ul className="space-y-3">
+                      {uses.map((use, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span className={use.includes("NIJE") ? "text-destructive font-semibold" : "text-muted-foreground"}>
+                            {use}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <div>
                   <Button asChild size="lg">
                     <Link to="/kontakt">Pošaljite upit</Link>
                   </Button>
@@ -113,22 +131,6 @@ const TehnickiAlkohol = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card">
-                  <CardContent className="pt-6">
-                    <h3 className="text-xl font-semibold mb-4">Područja primene</h3>
-                    <ul className="space-y-3">
-                      {uses.map((use, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                          <span className={use.includes("NIJE") ? "text-destructive font-semibold" : "text-muted-foreground"}>
-                            {use}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-
                 <Card className="shadow-card bg-secondary/50">
                   <CardContent className="pt-6">
                     <h3 className="text-xl font-semibold mb-2">Velika proizvodnja</h3>
@@ -140,50 +142,6 @@ const TehnickiAlkohol = () => {
                   </CardContent>
                 </Card>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Products */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">Slični proizvodi</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="shadow-card hover:shadow-hover transition-all">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-2">Etanol 96%</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Visokokvalitetni etanol za farmaceutsku i hemijsku industriju
-                  </p>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link to="/proizvodi/etanol96">Saznajte više</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-card hover:shadow-hover transition-all">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-2">Alkohol 70%</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Za dezinfekciju i industrijsku primenu
-                  </p>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link to="/proizvodi/alkohol70">Saznajte više</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-card hover:shadow-hover transition-all">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-2">Demineralizovana voda</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Čista voda za industrijske procese
-                  </p>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link to="/proizvodi/demivoda">Saznajte više</Link>
-                  </Button>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
