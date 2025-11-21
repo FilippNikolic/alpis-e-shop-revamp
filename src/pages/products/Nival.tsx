@@ -55,27 +55,46 @@ const Nival = () => {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
-                  <p className="mb-4">
-                    <strong className="text-foreground">NIVAL – Letnja tečnost za pranje stakala</strong> je 
-                    tečnost prijatnog mirisa na bazi alkohola i odgovarajućih dodataka. Služi za 
-                    punjenje sistema za pranje i čišćenje vetrobranskog stakla, farova i drugih 
-                    staklenih površina motornih vozila u letnjoj sezoni.
-                  </p>
-                  <p className="mb-4">
-                    Tečnost je namenjena pranju staklenih površina motornih vozila i ne oštećuje 
-                    gumene i ofarbane površine vozila, a efikasno i brzo uklanja mrlje od insekata 
-                    u letnjoj sezoni.
-                  </p>
-                  <p>
-                    NIVAL tečnost obezbeđuje kristalno čisto staklo bez tragova i mrlija, 
-                    čime se poboljšava vidljivost i bezbednost vožnje.
-                  </p>
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
+                  <div className="prose prose-lg max-w-none text-muted-foreground">
+                    <p className="mb-4">
+                      <strong className="text-foreground">NIVAL – Letnja tečnost za pranje stakala</strong> je 
+                      tečnost prijatnog mirisa na bazi alkohola i odgovarajućih dodataka. Služi za 
+                      punjenje sistema za pranje i čišćenje vetrobranskog stakla, farova i drugih 
+                      staklenih površina motornih vozila u letnjoj sezoni.
+                    </p>
+                    <p className="mb-4">
+                      Tečnost je namenjena pranju staklenih površina motornih vozila i ne oštećuje 
+                      gumene i ofarbane površine vozila, a efikasno i brzo uklanja mrlje od insekata 
+                      u letnjoj sezoni.
+                    </p>
+                    <p>
+                      NIVAL tečnost obezbeđuje kristalno čisto staklo bez tragova i mrlija, 
+                      čime se poboljšava vidljivost i bezbednost vožnje.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="mt-8 flex gap-4">
+                <Card className="shadow-card lg:block">
+                  <CardContent className="pt-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <Shield className="h-6 w-6 text-accent" />
+                      <h3 className="text-xl font-semibold">Primena</h3>
+                    </div>
+                    <ul className="space-y-3">
+                      {uses.map((use, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{use}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <div>
                   <Button asChild size="lg">
                     <Link to="/kontakt">Pošaljite upit</Link>
                   </Button>
@@ -102,23 +121,6 @@ const Nival = () => {
                         <li key={index} className="flex items-start gap-3">
                           <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                           <span className="text-muted-foreground">{spec}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="shadow-card">
-                  <CardContent className="pt-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <Shield className="h-6 w-6 text-accent" />
-                      <h3 className="text-xl font-semibold">Primena</h3>
-                    </div>
-                    <ul className="space-y-3">
-                      {uses.map((use, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{use}</span>
                         </li>
                       ))}
                     </ul>

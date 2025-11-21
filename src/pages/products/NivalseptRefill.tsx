@@ -45,40 +45,58 @@ const NivalseptRefill = () => {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
-                  <p className="mb-4">
-                    <strong className="text-foreground">NIVALSEPT 70% DOPUNA</strong> je ekonomično 
-                    refil pakovanje dezifinfekcijskog sredstva za ruke. Namenjena je za dopunu postojećih 
-                    boca sa pumpicama ili za samostalnu upotrebu.
-                  </p>
-
-                  <div className="bg-primary/10 border-l-4 border-primary p-4 rounded my-6">
-                    <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                      <Package className="h-5 w-5" />
-                      Uputstvo za upotrebu:
-                    </h3>
-                    <p className="text-sm">
-                      Utrljajte jednu dozu (veličina čepa) na šake i obezbedite da su dovoljno vlažne. 
-                      Ostavite da se prirodno osuši 1 min i nije potrebno ispirati NIVALSEPT 70%. 
-                      Proizvod koristite po potrebi.
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
+                  <div className="prose prose-lg max-w-none text-muted-foreground">
+                    <p className="mb-4">
+                      <strong className="text-foreground">NIVALSEPT 70% DOPUNA</strong> je ekonomično 
+                      refil pakovanje dezifinfekcijskog sredstva za ruke. Namenjena je za dopunu postojećih 
+                      boca sa pumpicama ili za samostalnu upotrebu.
                     </p>
-                  </div>
 
-                  <div className="bg-destructive/10 border-l-4 border-destructive p-4 rounded my-6">
-                    <h3 className="font-semibold text-destructive mb-2 flex items-center gap-2">
-                      <AlertCircle className="h-5 w-5" />
-                      Napomena:
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      NIVALSEPT 70% je namenjen samo za spoljnu upotrebu. Izbegavajte kontakt sa 
-                      očima, ušima, sluzokožama (nos, usta...).
-                    </p>
+                    <div className="bg-primary/10 border-l-4 border-primary p-4 rounded my-6">
+                      <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                        <Package className="h-5 w-5" />
+                        Uputstvo za upotrebu:
+                      </h3>
+                      <p className="text-sm">
+                        Utrljajte jednu dozu (veličina čepa) na šake i obezbedite da su dovoljno vlažne. 
+                        Ostavite da se prirodno osuši 1 min i nije potrebno ispirati NIVALSEPT 70%. 
+                        Proizvod koristite po potrebi.
+                      </p>
+                    </div>
+
+                    <div className="bg-destructive/10 border-l-4 border-destructive p-4 rounded my-6">
+                      <h3 className="font-semibold text-destructive mb-2 flex items-center gap-2">
+                        <AlertCircle className="h-5 w-5" />
+                        Napomena:
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        NIVALSEPT 70% je namenjen samo za spoljnu upotrebu. Izbegavajte kontakt sa 
+                        očima, ušima, sluzokožama (nos, usta...).
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="mt-8">
+                <Card className="shadow-card lg:block">
+                  <CardContent className="pt-6">
+                    <h3 className="text-xl font-semibold mb-2">Primena</h3>
+                    <p className="text-muted-foreground mb-3">
+                      Idealno za:
+                    </p>
+                    <ul className="space-y-1 text-sm text-muted-foreground">
+                      <li>• Zdravstvene ustanove</li>
+                      <li>• Prehrambenu industriju</li>
+                      <li>• Ugostiteljske objekte</li>
+                      <li>• Predškolske ustanove</li>
+                      <li>• Domaćinstva sa većom potrošnjom</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <div>
                   <Button asChild size="lg">
                     <Link to="/kontakt">Pošaljite upit</Link>
                   </Button>
@@ -121,21 +139,6 @@ const NivalseptRefill = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card bg-secondary/50">
-                  <CardContent className="pt-6">
-                    <h3 className="text-xl font-semibold mb-2">Primena</h3>
-                    <p className="text-muted-foreground mb-3">
-                      Idealno za:
-                    </p>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Zdravstvene ustanove</li>
-                      <li>• Prehrambenu industriju</li>
-                      <li>• Ugostiteljske objekte</li>
-                      <li>• Predškolske ustanove</li>
-                      <li>• Domaćinstva sa većom potrošnjom</li>
-                    </ul>
-                  </CardContent>
-                </Card>
               </div>
             </div>
           </div>
