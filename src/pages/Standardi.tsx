@@ -363,7 +363,7 @@ const Standardi = () => {
 
       {/* Image Dialog */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-md">
+        <DialogContent className="max-w-xl">
           <DialogHeader>
             <DialogTitle>Sertifikat</DialogTitle>
           </DialogHeader>
@@ -373,7 +373,7 @@ const Standardi = () => {
                 src={selectedImage} 
                 alt="Sertifikat" 
                 className="max-w-full h-auto rounded-lg"
-                style={{ maxHeight: '400px' }}
+                style={{ maxHeight: '550px' }}
               />
             )}
           </div>
