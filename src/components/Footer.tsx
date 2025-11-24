@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.svg";
 
 export const Footer = () => {
   return (
@@ -21,22 +21,34 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4">Proizvodi</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/proizvodi/alkohol70" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  to="/proizvodi/alkohol70"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Alkohol 70%
                 </Link>
               </li>
               <li>
-                <Link to="/proizvodi/etanol96" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  to="/proizvodi/etanol96"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Etanol 96%
                 </Link>
               </li>
               <li>
-                <Link to="/proizvodi/nival" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  to="/proizvodi/nival"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Nival
                 </Link>
               </li>
               <li>
-                <Link to="/proizvodi/nivalsept-pumpica" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  to="/proizvodi/nivalsept-pumpica"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Nivalsept
                 </Link>
               </li>
@@ -47,27 +59,42 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4">Kompanija</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/kompanija" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  to="/kompanija"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   O nama
                 </Link>
               </li>
               <li>
-                <Link to="/o-alkoholu" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  to="/o-alkoholu"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   O alkoholu
                 </Link>
               </li>
               <li>
-                <Link to="/standardi" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  to="/standardi"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Standardi i nagrade
                 </Link>
               </li>
               <li>
-                <Link to="/karijera" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  to="/karijera"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Karijera
                 </Link>
               </li>
               <li>
-                <Link to="/kontakt" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  to="/kontakt"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Kontakt
                 </Link>
               </li>
@@ -79,7 +106,7 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
-                <a 
+                <a
                   href="https://www.google.com/maps/search/?api=1&query=Dunavska+77+Kovin+Srbija"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -90,7 +117,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <a 
+                <a
                   href="tel:+381137456600"
                   className="hover:text-primary transition-colors"
                 >
@@ -99,7 +126,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <a 
+                <a
                   href="mailto:office@alpis.rs"
                   className="hover:text-primary transition-colors"
                 >
