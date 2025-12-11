@@ -106,13 +106,13 @@ const Demivoda = () => {
                       <img 
                         src={demivoda2lImg}
                         alt="Demineralizovana voda 2L" 
-                        className="object-contain drop-shadow-lg"
+                        className="object-contain"
                         style={{ maxWidth: '110px', maxHeight: '220px', width: 'auto', height: 'auto' }}
                       />
                       <img 
                         src={demivodaImg}
                         alt="Demineralizovana voda 5L" 
-                        className="object-contain drop-shadow-lg"
+                        className="object-contain"
                         style={{ maxWidth: '110px', maxHeight: '220px', width: 'auto', height: 'auto' }}
                       />
                     </div>

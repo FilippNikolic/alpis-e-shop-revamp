@@ -107,7 +107,7 @@ const NivalZimska = () => {
                       <img 
                         src={nivalZimskaImg}
                         alt="Nival zimska tečnost za pranje stakala" 
-                        className="object-contain drop-shadow-lg"
+                        className="object-contain"
                         style={{ maxWidth: '220px', maxHeight: '220px', width: 'auto', height: 'auto' }}
                       />
                     </div>

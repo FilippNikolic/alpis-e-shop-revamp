@@ -108,7 +108,7 @@ const NivalOdmrzivac = () => {
                       <img 
                         src={odmrzivacImg}
                         alt="Nival Odmrzivač" 
-                        className="object-contain drop-shadow-lg"
+                        className="object-contain"
                         style={{ maxWidth: '220px', maxHeight: '220px', width: 'auto', height: 'auto' }}
                       />
                     </div>
