@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 import { Beaker, Shield, Award, Users } from "lucide-react";
 import alkohol70Img from "@/assets/products/alkohol70.png";
 import etanol96Img from "@/assets/products/etanol96.png";
-import demivodaImg from "@/assets/products/demivoda.png";
+import demivodaImg from "@/assets/products/demivoda-5l.jpg";
 import sirceImg from "@/assets/products/sirce.png";
-import nivalImg from "@/assets/products/nival.png";
+import nivalLetnjaImg from "@/assets/products/nival-letnja.jpg";
+import nivalZimskaImg from "@/assets/products/nival-zimska.jpg";
+import nivalOdmrzivacImg from "@/assets/products/nival-odmrzivac.jpg";
 import nivalseptPumpImg from "@/assets/products/nivalsept-pump.png";
-import nivalseptRefillImg from "@/assets/products/nivalsept-refill.png";
-import nivalseptGelImg from "@/assets/products/nivalsept-gel.png";
 import heroImg from "@/assets/hero/home-hero.jpg";
 
 const Index = () => {
@@ -41,28 +41,28 @@ const Index = () => {
       image: sirceImg,
     },
     {
-      title: "Nival",
+      title: "NIVAL Letnja tečnost",
       description: "Tečnost za pranje stakala vozila - letnja varijanta",
       link: "/proizvodi/nival",
-      image: nivalImg,
+      image: nivalLetnjaImg,
+    },
+    {
+      title: "NIVAL Zimska tečnost",
+      description: "Tečnost za pranje stakala vozila - zimska varijanta",
+      link: "/proizvodi/nival-zimska",
+      image: nivalZimskaImg,
+    },
+    {
+      title: "NIVAL Odmrzivač",
+      description: "Koncentrat za odmrzavanje stakala 0.75L",
+      link: "/proizvodi/nival-odmrzivac",
+      image: nivalOdmrzivacImg,
     },
     {
       title: "Nivalsept sa pumpicom",
       description: "Dezinfekciono sredstvo za ruke 70%",
       link: "/proizvodi/nivalsept-pumpica",
       image: nivalseptPumpImg,
-    },
-    {
-      title: "Nivalsept dopuna",
-      description: "Refil pakovanje za ekonomičnu upotrebu",
-      link: "/proizvodi/nivalsept-dopuna",
-      image: nivalseptRefillImg,
-    },
-    {
-      title: "Nivalsept gel",
-      description: "Gel za dezinfekciju ruku",
-      link: "/proizvodi/nivalsept-gel",
-      image: nivalseptGelImg,
     },
   ];
 
@@ -80,7 +80,7 @@ const Index = () => {
     {
       icon: Award,
       title: "Sertifikati",
-      description: "ISO 9001:2000, ISO 14001:2004, HACCP standardi kvaliteta",
+      description: "ISO 9001:2015, HACCP, IFS HPC, KOSHER i ISO 45001:2018",
     },
     {
       icon: Users,

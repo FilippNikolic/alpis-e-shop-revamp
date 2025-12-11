@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
 import { RelatedProducts } from "@/components/RelatedProducts";
-import demivodaImg from "@/assets/products/demivoda.png";
+import demivodaImg from "@/assets/products/demivoda-5l.jpg";
 import alkohol70Img from "@/assets/products/alkohol70.png";
 import etanol96Img from "@/assets/products/etanol96.png";
 import alksirceImg from "@/assets/products/sirce.png";
@@ -17,13 +17,13 @@ const Demivoda = () => {
     "Potpuno demineralizovana",
     "Bez mineralnih primesa",
     "pH vrednost: 6.5-7.5",
-    "Zapremina: 5000 mL",
-    "Rok trajanja: neograničen",
+    "Pakovanje: PET boca 2L, 5L",
+    "Rok trajanja: 2 godine",
   ];
 
   const uses = [
     "Punjenje akumulatora",
-    "Glačala i parni aparati",
+    "Pegle i parni aparati",
     "Rashladni sistemi vozila",
     "Laboratorijska upotreba",
     "Industrijski procesi",
@@ -67,11 +67,11 @@ const Demivoda = () => {
                     </p>
                     <p className="mb-4">
                       Naša demineralizovana voda je idealna za upotrebu u akumulatorima, 
-                      glačalima, rashladnim sistemima i mnogim drugim primenama gde je 
+                      peglama, rashladnim sistemima i mnogim drugim primenama gde je 
                       potrebna visoka čistoća vode.
                     </p>
                     <p>
-                      Proizvod dolazi u praktičnim bocama od 5 litara koje omogućavaju 
+                      Proizvod dolazi u praktičnim bocama od 2 i 5 litara koje omogućavaju 
                       jednostavno rukovanje i skladištenje.
                     </p>
                   </div>

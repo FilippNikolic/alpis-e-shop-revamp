@@ -5,19 +5,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Droplet, Shield } from "lucide-react";
 import { RelatedProducts } from "@/components/RelatedProducts";
-import nivalImg from "@/assets/products/nival-letnja.jpg";
+import nivalZimskaImg from "@/assets/products/nival-zimska.jpg";
 import alkohol70Img from "@/assets/products/alkohol70.png";
 import etanol96Img from "@/assets/products/etanol96.png";
 import demivodaImg from "@/assets/products/demivoda-5l.jpg";
-import nivalZimskaImg from "@/assets/products/nival-zimska.jpg";
+import nivalLetnjaImg from "@/assets/products/nival-letnja.jpg";
 import heroImg from "@/assets/hero/nival-hero.jpg";
 
-const Nival = () => {
+const NivalZimska = () => {
   const specifications = [
-    "Izgled: Bistra, zelena tečnost",
-    "Gustina (20°C): 0,98 g/cm³",
-    "pH vrednost: 4-5",
-    "Temperatura smrzavanja: -5°C",
+    "Izgled: Bistra, plava tečnost",
+    "Gustina (20°C): 0,95 g/cm³",
+    "pH vrednost: 6-7",
+    "Temperatura smrzavanja: -20°C",
     "Pakovanje: PET boca 2L, 5L",
   ];
 
@@ -25,7 +25,7 @@ const Nival = () => {
     "Pranje vetrobranskog stakla",
     "Čišćenje farova",
     "Pranje drugih staklenih površina vozila",
-    "Efikasno uklanjanje insekata",
+    "Zaštita od smrzavanja u zimskim uslovima",
   ];
 
   return (
@@ -43,10 +43,10 @@ const Nival = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-                NIVAL - Letnja tečnost
+                NIVAL - Zimska tečnost
               </h1>
               <p className="text-xl md:text-2xl text-white/95 animate-fade-in">
-                Tečnost za pranje stakala vozila - letnja varijanta
+                Tečnost za pranje stakala vozila - zimska varijanta do -20°C
               </p>
             </div>
           </div>
@@ -60,19 +60,18 @@ const Nival = () => {
                   <h2 className="text-3xl font-bold mb-6">Opis proizvoda</h2>
                   <div className="prose prose-lg max-w-none text-muted-foreground">
                     <p className="mb-4">
-                      <strong className="text-foreground">NIVAL – Letnja tečnost za pranje stakala</strong> je 
+                      <strong className="text-foreground">NIVAL – Zimska tečnost za pranje stakala</strong> je 
                       tečnost prijatnog mirisa na bazi alkohola i odgovarajućih dodataka. Služi za 
                       punjenje sistema za pranje i čišćenje vetrobranskog stakla, farova i drugih 
-                      staklenih površina motornih vozila u letnjoj sezoni.
+                      staklenih površina motornih vozila u zimskoj sezoni.
                     </p>
                     <p className="mb-4">
                       Tečnost je namenjena pranju staklenih površina motornih vozila i ne oštećuje 
-                      gumene i ofarbane površine vozila, a efikasno i brzo uklanja mrlje od insekata 
-                      u letnjoj sezoni.
+                      gumene i ofarbane površine vozila. Obezbeđuje zaštitu od smrzavanja do -20°C.
                     </p>
                     <p>
-                      NIVAL tečnost obezbeđuje kristalno čisto staklo bez tragova i mrlija, 
-                      čime se poboljšava vidljivost i bezbednost vožnje.
+                      NIVAL zimska tečnost obezbeđuje kristalno čisto staklo bez tragova i mrlija, 
+                      čime se poboljšava vidljivost i bezbednost vožnje u zimskim uslovima.
                     </p>
                   </div>
                 </div>
@@ -106,8 +105,8 @@ const Nival = () => {
                   <CardContent className="pt-6">
                     <div className="w-full mb-4 bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg overflow-hidden flex items-center justify-center p-4" style={{ maxHeight: '280px' }}>
                       <img 
-                        src={nivalImg}
-                        alt="Nival letnja tečnost za pranje stakala" 
+                        src={nivalZimskaImg}
+                        alt="Nival zimska tečnost za pranje stakala" 
                         className="object-contain drop-shadow-lg"
                         style={{ maxWidth: '220px', maxHeight: '220px', width: 'auto', height: 'auto' }}
                       />
@@ -131,6 +130,7 @@ const Nival = () => {
                   <CardContent className="pt-6">
                     <h3 className="text-xl font-semibold mb-2">Prednosti</h3>
                     <ul className="space-y-2 text-muted-foreground">
+                      <li>• Zaštita do -20°C</li>
                       <li>• Ne oštećuje gumu i ofarbane površine</li>
                       <li>• Prijatan miris</li>
                       <li>• Efikasno čišćenje</li>
@@ -145,10 +145,10 @@ const Nival = () => {
 
         <RelatedProducts products={[
           {
-            name: "NIVAL Zimska",
-            image: nivalZimskaImg,
-            link: "/proizvodi/nival-zimska",
-            description: "Zimska tečnost za vetrobranska stakla"
+            name: "NIVAL Letnja",
+            image: nivalLetnjaImg,
+            link: "/proizvodi/nival",
+            description: "Letnja tečnost za vetrobranska stakla"
           },
           {
             name: "Alkohol 70%",
@@ -176,4 +176,4 @@ const Nival = () => {
   );
 };
 
-export default Nival;
+export default NivalZimska;
