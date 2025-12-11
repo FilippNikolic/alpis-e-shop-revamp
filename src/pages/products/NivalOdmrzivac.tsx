@@ -5,10 +5,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Droplet, Shield } from "lucide-react";
 import { RelatedProducts } from "@/components/RelatedProducts";
-import odmrzivacImg from "@/assets/products/nival-odmrzivac.jpg";
+import odmrzivacImg from "@/assets/products/nival-odmrzivac-new.jpg";
 import alkohol70Img from "@/assets/products/alkohol70.png";
-import nivalLetnjaImg from "@/assets/products/nival-letnja.jpg";
-import nivalZimskaImg from "@/assets/products/nival-zimska.jpg";
+import nivalLetnjaImg from "@/assets/products/nival-letnja-new.jpg";
+import nivalZimskaImg from "@/assets/products/nival-zimska-new.jpg";
 import demivodaImg from "@/assets/products/demivoda-5l.jpg";
 import heroImg from "@/assets/hero/nival-hero.jpg";
 
