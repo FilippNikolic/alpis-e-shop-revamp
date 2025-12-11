@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
 import { RelatedProducts } from "@/components/RelatedProducts";
-import demivodaImg from "@/assets/products/demivoda-5l.jpg";
+import demivodaImg from "@/assets/products/demivoda-5l-new.jpg";
 import demivoda2lImg from "@/assets/products/demivoda-2l.jpg";
 import alkohol70Img from "@/assets/products/alkohol70.png";
 import etanol96Img from "@/assets/products/etanol96.png";
