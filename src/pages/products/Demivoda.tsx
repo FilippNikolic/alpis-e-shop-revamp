@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
 import { RelatedProducts } from "@/components/RelatedProducts";
 import demivodaImg from "@/assets/products/demivoda-5l.jpg";
+import demivoda2lImg from "@/assets/products/demivoda-2l.jpg";
 import alkohol70Img from "@/assets/products/alkohol70.png";
 import etanol96Img from "@/assets/products/etanol96.png";
 import alksirceImg from "@/assets/products/sirce.png";
@@ -101,12 +102,18 @@ const Demivoda = () => {
               <div className="space-y-6">
                 <Card className="shadow-card">
                   <CardContent className="pt-6">
-                    <div className="w-full mb-4 bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg overflow-hidden flex items-center justify-center p-4" style={{ maxHeight: '280px' }}>
+                    <div className="w-full mb-4 bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg overflow-hidden flex items-center justify-center p-4 gap-4" style={{ maxHeight: '280px' }}>
+                      <img 
+                        src={demivoda2lImg}
+                        alt="Demineralizovana voda 2L" 
+                        className="object-contain drop-shadow-lg"
+                        style={{ maxWidth: '110px', maxHeight: '220px', width: 'auto', height: 'auto' }}
+                      />
                       <img 
                         src={demivodaImg}
-                        alt="Demineralizovana voda" 
+                        alt="Demineralizovana voda 5L" 
                         className="object-contain drop-shadow-lg"
-                        style={{ maxWidth: '220px', maxHeight: '220px', width: 'auto', height: 'auto' }}
+                        style={{ maxWidth: '110px', maxHeight: '220px', width: 'auto', height: 'auto' }}
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-4">Specifikacije</h3>

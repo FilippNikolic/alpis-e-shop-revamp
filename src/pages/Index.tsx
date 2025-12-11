@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 import { Beaker, Shield, Award, Users } from "lucide-react";
 import alkohol70Img from "@/assets/products/alkohol70.png";
 import etanol96Img from "@/assets/products/etanol96.png";
-import demivodaImg from "@/assets/products/demivoda-5l.jpg";
+import demivodaImg from "@/assets/products/demivoda-2l.jpg";
 import sirceImg from "@/assets/products/sirce.png";
-import nivalLetnjaImg from "@/assets/products/nival-letnja.jpg";
-import nivalZimskaImg from "@/assets/products/nival-zimska.jpg";
-import nivalOdmrzivacImg from "@/assets/products/nival-odmrzivac.jpg";
+import nivalLetnjaImg from "@/assets/products/nival-letnja-new.jpg";
+import nivalZimskaImg from "@/assets/products/nival-zimska-new.jpg";
+import nivalOdmrzivacImg from "@/assets/products/nival-odmrzivac-new.jpg";
 import nivalseptPumpImg from "@/assets/products/nivalsept-pump.png";
 import heroImg from "@/assets/hero/home-hero.jpg";
 
