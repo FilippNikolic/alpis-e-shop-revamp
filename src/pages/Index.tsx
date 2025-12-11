@@ -163,12 +163,12 @@ const Index = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {products.map((product, index) => (
-                <Card key={index} className="border-0 shadow-card hover:shadow-hover transition-all duration-300 group overflow-hidden">
+                <Card key={index} className="border-0 transition-all duration-300 group overflow-hidden">
                   <div className="aspect-square w-full bg-gradient-to-br from-muted/30 to-muted/10 flex items-center justify-center p-4">
                     <img 
                       src={product.image}
                       alt={product.title} 
-                      className="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       style={{ maxWidth: '180px', maxHeight: '180px' }}
                     />
                   </div>
