@@ -64,33 +64,37 @@ export const Header = () => {
               >
                 Alkoholno sirće
               </Link>
+              <div className="border-t border-border my-2"></div>
+              <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">
+                NIVAL serija
+              </div>
               <Link
                 to="/proizvodi/nival"
                 className="block px-4 py-2 text-sm hover:bg-muted transition-colors"
               >
-                Nival (tečnost za stakla)
+                NIVAL Letnja tečnost
+              </Link>
+              <Link
+                to="/proizvodi/nival-zimska"
+                className="block px-4 py-2 text-sm hover:bg-muted transition-colors"
+              >
+                NIVAL Zimska tečnost
+              </Link>
+              <Link
+                to="/proizvodi/nival-odmrzivac"
+                className="block px-4 py-2 text-sm hover:bg-muted transition-colors"
+              >
+                NIVAL Odmrzivač
               </Link>
               <div className="border-t border-border my-2"></div>
               <div className="px-4 py-2 text-xs font-semibold text-muted-foreground">
-                Nivalsept serija
+                Nivalsept
               </div>
               <Link
                 to="/proizvodi/nivalsept-pumpica"
                 className="block px-4 py-2 text-sm hover:bg-muted transition-colors"
               >
                 Nivalsept sa pumpicom
-              </Link>
-              <Link
-                to="/proizvodi/nivalsept-dopuna"
-                className="block px-4 py-2 text-sm hover:bg-muted transition-colors"
-              >
-                Nivalsept dopuna
-              </Link>
-              <Link
-                to="/proizvodi/nivalsept-gel"
-                className="block px-4 py-2 text-sm hover:bg-muted transition-colors"
-              >
-                Nivalsept gel
               </Link>
             </div>
           </div>
@@ -175,25 +179,19 @@ export const Header = () => {
                 Alkoholno sirće
               </Link>
               <Link to="/proizvodi/nival" className="block text-sm py-2 pl-4">
-                Nival
+                NIVAL Letnja tečnost
+              </Link>
+              <Link to="/proizvodi/nival-zimska" className="block text-sm py-2 pl-4">
+                NIVAL Zimska tečnost
+              </Link>
+              <Link to="/proizvodi/nival-odmrzivac" className="block text-sm py-2 pl-4">
+                NIVAL Odmrzivač
               </Link>
               <Link
                 to="/proizvodi/nivalsept-pumpica"
                 className="block text-sm py-2 pl-4"
               >
                 Nivalsept sa pumpicom
-              </Link>
-              <Link
-                to="/proizvodi/nivalsept-dopuna"
-                className="block text-sm py-2 pl-4"
-              >
-                Nivalsept dopuna
-              </Link>
-              <Link
-                to="/proizvodi/nivalsept-gel"
-                className="block text-sm py-2 pl-4"
-              >
-                Nivalsept gel
               </Link>
             </div>
             <Link to="/o-alkoholu" className="block text-sm font-medium py-2">

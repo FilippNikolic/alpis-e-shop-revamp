@@ -85,7 +85,7 @@ const Kompanija = () => {
                     <Award className="h-10 w-10 text-primary mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Sertifikati</h3>
                     <p className="text-muted-foreground">
-                      ISO 9001:2000, ISO 14001:2004, HACCP - garantija 
+                      ISO 9001:2015, HACCP, IFS HPC, KOSHER i ISO 45001:2018 - garantija 
                       vrhunskog kvaliteta.
                     </p>
                   </CardContent>
@@ -107,7 +107,7 @@ const Kompanija = () => {
                 <h2 className="text-2xl font-bold mb-4">Kapaciteti proizvodnje</h2>
                 <div className="space-y-3 text-muted-foreground">
                   <p>
-                    • Godišnja proizvodnja: više od 2 miliona litara etanola
+                    • Godišnja proizvodnja: 4 miliona litara etanola
                   </p>
                   <p>
                     • Automatizovani proizvodni proces

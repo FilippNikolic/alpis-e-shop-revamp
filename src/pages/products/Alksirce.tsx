@@ -16,8 +16,8 @@ const Alksirce = () => {
   const specifications = [
     "Kiselost 9%",
     "Prirodan proizvod",
-    "Zapremina: 1000 mL",
-    "Rok trajanja: 2 godine",
+    "Pakovanje: PET boca 1L, 3L",
+    "Rok trajanja: neograničen",
     "Čuvati na sobnoj temperaturi",
   ];
 
@@ -71,8 +71,7 @@ const Alksirce = () => {
                       odličan prirodan proizvod za čišćenje.
                     </p>
                     <p>
-                      Proizvod je pakovan u staklene boce od 1 litra koje čuvaju 
-                      kvalitet i svežinu sirćeta.
+                      Proizvod je pakovan u plastične boce od 1 i 3 litra.
                     </p>
                   </div>
                 </div>

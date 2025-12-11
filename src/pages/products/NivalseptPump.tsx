@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 import { CheckCircle2, Droplets, AlertCircle } from "lucide-react";
 import { RelatedProducts } from "@/components/RelatedProducts";
 import nivalseptPumpImg from "@/assets/products/nivalsept-pump.png";
-import nivalseptGelImg from "@/assets/products/nivalsept-gel.png";
-import nivalseptRefillImg from "@/assets/products/nivalsept-refill.png";
 import alkohol70Img from "@/assets/products/alkohol70.png";
-import nivalImg from "@/assets/products/nival.png";
+import nivalLetnjaImg from "@/assets/products/nival-letnja.jpg";
+import nivalZimskaImg from "@/assets/products/nival-zimska.jpg";
+import etanol96Img from "@/assets/products/etanol96.png";
 import heroImg from "@/assets/hero/nivalsept-hero.jpg";
 
 const NivalseptPump = () => {
@@ -152,16 +152,16 @@ const NivalseptPump = () => {
 
         <RelatedProducts products={[
           {
-            name: "NIVALSEPT Gel",
-            image: nivalseptGelImg,
-            link: "/proizvodi/nivalsept-gel",
-            description: "Gel za dezinfekciju ruku"
+            name: "NIVAL Letnja",
+            image: nivalLetnjaImg,
+            link: "/proizvodi/nival",
+            description: "Letnja tečnost za stakla"
           },
           {
-            name: "NIVALSEPT Refil",
-            image: nivalseptRefillImg,
-            link: "/proizvodi/nivalsept-dopuna",
-            description: "Dopuna za pumpice"
+            name: "NIVAL Zimska",
+            image: nivalZimskaImg,
+            link: "/proizvodi/nival-zimska",
+            description: "Zimska tečnost za stakla"
           },
           {
             name: "Alkohol 70%",
@@ -170,10 +170,10 @@ const NivalseptPump = () => {
             description: "Dezinfekcija površina"
           },
           {
-            name: "NIVAL",
-            image: nivalImg,
-            link: "/proizvodi/nival",
-            description: "Tekući alkohol sa glicerinom"
+            name: "Etanol 96%",
+            image: etanol96Img,
+            link: "/proizvodi/etanol96",
+            description: "Visokokvalitetni etanol"
           }
         ]} />
       </main>
